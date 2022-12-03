@@ -90,7 +90,7 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         }
         delete drama;
     } else {
-        std::cout << type[0] << "is not a valid movie type" << std::endl;
+        std::cout << type[0] << " is not a valid movie type" << std::endl;
         success = false;
     }
 }

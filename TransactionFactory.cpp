@@ -69,7 +69,7 @@ Transaction *TransactionFactory::createTransaction(std::istream &istream, std::s
             break;
         default:
             retVal = nullptr;
-            std::cout << type[0] << " is an invalid transaction commend" << std::endl;
+            std::cout << type[0] << " is an invalid transaction command" << std::endl;
             break;
 
     }
