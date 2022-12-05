@@ -4,9 +4,7 @@
 #include "InputProcessor.h"
 
 // Constructor
-InputProcessor::InputProcessor() {
-
-}
+InputProcessor::InputProcessor() = default;
 
 // Deconstructor
 InputProcessor::~InputProcessor() {
