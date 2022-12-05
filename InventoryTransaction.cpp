@@ -4,13 +4,8 @@
 
 #include "InventoryTransaction.h"
 
-InventoryTransaction::InventoryTransaction() {
+InventoryTransaction::InventoryTransaction() = default;
 
-}
-
-InventoryTransaction::~InventoryTransaction() {
-
-}
 
 void InventoryTransaction::execute() {
     displayInventory(movieTreeReference, 3);
@@ -22,7 +17,7 @@ void InventoryTransaction::displayInventory(std::set<Movie *> *movies, int size)
         std::cout << "_______________________" << std::endl;
         std::cout << MOVIE_TYPE[i] << " " << std::endl;
         std::cout << "_______________________" << std::endl;
-        std::set<Movie*>::iterator j = movies[i].begin();
+        auto j = movies[i].begin();
         for (; j != movies[i].end(); j++) {
             std::cout << **j << std::endl;
         }

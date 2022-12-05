@@ -4,13 +4,7 @@
 
 #include "MovieKey.h"
 
-MovieKey::MovieKey() {
-
-}
-
-MovieKey::~MovieKey() {
-
-}
+MovieKey::MovieKey() = default;
 
 void MovieKey::setTitle(std::string title) {
     this->title = title;
@@ -28,13 +22,13 @@ std::string MovieKey::getTitle() const {
     return title;
 }
 
-bool MovieKey::operator==(const std::string rhs) const {
+bool MovieKey::operator==(const std::string & rhs) const {
     return title == rhs;
 }
 
 int MovieKey::hash() const {
     int val = 0;
-    for (int i = 0; i <title.size(); i++) {
+    for (char i : title /*int i = 0; i <title.size(); i++ */) {
         val += title[i];
     }
     return val;

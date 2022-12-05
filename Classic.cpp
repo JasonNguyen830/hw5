@@ -4,13 +4,9 @@
 
 #include "Classic.h"
 
-Classic::Classic() {
+Classic::Classic() = default;
 
-}
-
-Classic::~Classic() {
-
-}
+Classic::~Classic() = default;
 
 char Classic::getChar() const {
     return 'C';
@@ -67,7 +63,7 @@ bool Classic::operator!=(const Movie &movie) const {
 }
 
 bool Classic::operator>(const Movie &movie) const {
-    const Classic* movie2 = dynamic_cast<const Classic*>(&movie);
+    const auto *const movie2 = dynamic_cast<const Classic*>(&movie);
     if (releaseDate > movie2->releaseDate) {
         return true;
     } else {
@@ -92,11 +88,15 @@ bool Classic::operator<(const Movie &movie) const {
 void Classic::setActorAndDate() {
     std::string line = getYear();
     std::stringstream stream(line);
-    std::string fName, lName, day, year;
-    stream >> fName;
-    stream >> lName;
+    std::string f_name;
+    std::string l_name;
+    std::string day;
+    std::string year;
+    
+    stream >> f_name;
+    stream >> l_name;
     stream >> day;
     stream >> year;
-    majorActor = fName + " " + lName;
+    majorActor = f_name + " " + l_name;
     releaseDate = day + " " + year;
 }

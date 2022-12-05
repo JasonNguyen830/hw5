@@ -15,7 +15,7 @@ const std::string MOVIE_TYPE[] = { "Comedy", "Classic", "Drama"};
 class InventoryTransaction : public DisplayTransaction {
 public:
     InventoryTransaction();
-    ~InventoryTransaction();
+    ~InventoryTransaction() = default;
     virtual void execute();
     void displayInventory(std::set<Movie*> movies[], int size);
 };

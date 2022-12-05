@@ -3,30 +3,27 @@
 //
 
 #include "MovieFactory.h"
-
-MovieFactory::MovieFactory() {
-
-}
-
-MovieFactory::~MovieFactory() {
-
-}
+#include <iostream> //place holder remove
+MovieFactory::MovieFactory() = default;
 
 Movie *MovieFactory::createMovie(const char type) {
-    Movie* retVal = nullptr;
+    Movie* ret_val = nullptr;
     switch (type) {
         case COMEDY:
-            retVal = new Comedy;
+            ret_val = new Comedy;
+            std::cout<< "Making comedy"<<std::endl;
             break;
         case CLASSIC:
-            retVal = new Classic;
+            ret_val = new Classic;
+            std::cout<< "Making classic"<<std::endl;
             break;
         case DRAMA:
-            retVal = new Drama;
+            ret_val = new Drama;
+            std::cout<< "Making Drama"<<std::endl;
             break;
         default:
-            retVal = nullptr;
+            ret_val = nullptr;
             break;
     }
-    return retVal;
+    return ret_val;
 }

@@ -5,11 +5,7 @@
 #include "Transaction.h"
 
 Transaction::Transaction() {
-    movieTreeReference = NULL;
-}
-
-Transaction::~Transaction() {
-
+    movieTreeReference = nullptr;
 }
 
 void Transaction::setMovie(std::set<Movie *> movieTree[]) {

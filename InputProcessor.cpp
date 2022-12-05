@@ -4,53 +4,48 @@
 
 #include "InputProcessor.h"
 
-InputProcessor::InputProcessor() {
+InputProcessor::InputProcessor() = default;
 
-}
-
-InputProcessor::~InputProcessor() {
-
-}
 
 void InputProcessor::processMovies(std::set<Movie *> movies[]) {
     std::fstream input;
     input.open("data4movies.txt");
     while (!input.eof()) {
-        std::string readInput;
-        std::getline(input, readInput);
-        std::stringstream lineInput(readInput);
-        getline(lineInput, readInput, ',');
-        char type = readInput[0];
+        std::string read_input;
+        std::getline(input, read_input);
+        std::stringstream line_input(read_input);
+        getline(line_input, read_input, ',');
+        char type = read_input[0];
 
         Movie* temp = MovieFactory::createMovie(type);
 
         if (temp) {
-            getline(lineInput, readInput, ',');
-            int stock = atoi(readInput.c_str());
+            getline(line_input, read_input, ',');
+            int stock = atoi(read_input.c_str());
 
             temp->setStock(stock);
-            lineInput.get();
-            getline(lineInput, readInput, ',');
-            std::string director = readInput;
+            line_input.get();
+            getline(line_input, read_input, ',');
+            std::string director = read_input;
 
             temp->setDirector(director);
 
-            lineInput.get();
-            getline(lineInput, readInput, ',');
-            std::string title = readInput;
+            line_input.get();
+            getline(line_input, read_input, ',');
+            std::string title = read_input;
 
             temp->setTitle(title);
 
-            lineInput.get();
-            getline(lineInput, readInput, ',');
-            std::string year = readInput;
+            line_input.get();
+            getline(line_input, read_input, ',');
+            std::string year = read_input;
 
             year.resize(year.size() - 1);
 
             temp->setYear(year);
 
             std::set<Movie*>::iterator it;
-            Movie* tempMovieComparator;
+            Movie* temp_movie_comparator;
             switch (temp->getChar()) {
                 case COMEDY:
                     movies[COMEDY_ENUM].insert(temp);
@@ -58,10 +53,10 @@ void InputProcessor::processMovies(std::set<Movie *> movies[]) {
                 case CLASSIC:
                     it = movies[CLASSICS_ENUM].begin();
                     for (; it != movies[CLASSICS_ENUM].end(); it++) {
-                        tempMovieComparator = *it;
-                        if (*temp == *tempMovieComparator){
-                            temp->setOtherMovie(tempMovieComparator);
-                            tempMovieComparator->setOtherMovie(temp);
+                        temp_movie_comparator = *it;
+                        if (*temp == *temp_movie_comparator){
+                            temp->setOtherMovie(temp_movie_comparator);
+                            temp_movie_comparator->setOtherMovie(temp);
                         }
                     }
 
@@ -84,11 +79,13 @@ void InputProcessor::processCustomers(HashTable<Customer> &customerContainer) {
     input.open("data4customers.txt");
     Customer* customer;
     while (!input.eof()) {
-        std::string ID, lName, fName;
-        input >> ID;
-        input >> lName;
-        input >> fName;
-        customer = new Customer(fName, lName, ID);
+        std::string id;
+        std::string l_name;
+        std::string f_name;
+        input >> id;
+        input >> l_name;
+        input >> f_name;
+        customer = new Customer(f_name, l_name, id);
         customerContainer.insert(customer);
     }
     input.close();
@@ -101,13 +98,13 @@ void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Custo
 
     std::fstream input;
     input.open("data4commands.txt");
-    std::string readInput;
+    std::string read_input;
 
     while (!input.eof()) {
-        getline(input, readInput);
-        std::stringstream lineInput(readInput);
+        getline(input, read_input);
+        std::stringstream line_input(read_input);
 
-        Transaction* transaction = TransactionFactory::createTransaction(lineInput, movies, customers);
+        Transaction* transaction = TransactionFactory::createTransaction(line_input, movies, customers);
         if (transaction) {
             transaction->execute();
         }

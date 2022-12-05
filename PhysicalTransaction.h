@@ -15,7 +15,7 @@
 class PhysicalTransaction : public Transaction {
 public:
     PhysicalTransaction();
-    ~PhysicalTransaction();
+    ~PhysicalTransaction() = default;
     virtual void execute() = 0;
     void setCustomer(Customer& cust);
     void setStream(std::istream& istream, bool& success);

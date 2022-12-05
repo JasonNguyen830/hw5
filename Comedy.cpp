@@ -5,17 +5,13 @@
 #include "Comedy.h"
 
 Comedy::Comedy(std::string title, std::string year) {
-    setTitle(title);
+    setTitle(std::move(title));
     setYear(year);
 }
 
-Comedy::Comedy() {
+Comedy::Comedy() = default;
 
-}
-
-Comedy::~Comedy() {
-
-}
+Comedy::~Comedy() = default;
 
 char Comedy::getChar() const {
     return 'F';

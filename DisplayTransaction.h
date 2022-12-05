@@ -9,7 +9,7 @@
 class DisplayTransaction : public Transaction {
 public:
     DisplayTransaction();
-    ~DisplayTransaction();
+    ~DisplayTransaction() = default;
     virtual void execute() = 0;
 };
 

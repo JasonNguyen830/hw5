@@ -4,13 +4,7 @@
 
 #include "HistoryTransaction.h"
 
-HistoryTransaction::HistoryTransaction() {
-
-}
-
-HistoryTransaction::~HistoryTransaction() {
-
-}
+HistoryTransaction::HistoryTransaction() = default;
 
 void HistoryTransaction::execute() {
     displayCustomerHistory();

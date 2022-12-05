@@ -14,10 +14,10 @@
 class BorrowTransaction : public PhysicalTransaction {
 public:
     BorrowTransaction();
-    ~BorrowTransaction();
+    ~BorrowTransaction() = default;
     virtual void execute();
     bool borrow(Movie& movie);
-    bool borrowClassic(Movie& movie);
+    static bool borrowClassic(Movie& movie);
     std::string getLogOfTrans() const;
 };
 

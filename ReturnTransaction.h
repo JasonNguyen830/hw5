@@ -12,7 +12,7 @@
 class ReturnTransaction: public PhysicalTransaction {
 public:
     ReturnTransaction();
-    ~ReturnTransaction();
+    ~ReturnTransaction() = default;
     virtual void execute();
     bool executeReturn(Movie& movie);
     std::string getLogOfTrans() const;

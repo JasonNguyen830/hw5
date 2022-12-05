@@ -4,13 +4,7 @@
 
 #include "BorrowTransaction.h"
 
-BorrowTransaction::BorrowTransaction() {
-
-}
-
-BorrowTransaction::~BorrowTransaction() {
-
-}
+BorrowTransaction::BorrowTransaction() = default;
 
 void BorrowTransaction::execute() {
     if (movie != nullptr) {
@@ -43,8 +37,8 @@ bool BorrowTransaction::borrowClassic(Movie &movie) {
     if (movie.getStock() >0) {
         return movie.setStock(movie.getStock() - 1);
     } else {
-        int otherStock = movie.getOtherMovie()->getStock();
-        return movie.getOtherMovie()->setStock(otherStock - 1);
+        int other_stock = movie.getOtherMovie()->getStock();
+        return movie.getOtherMovie()->setStock(other_stock - 1);
     }
 }
 

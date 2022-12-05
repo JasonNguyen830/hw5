@@ -10,8 +10,8 @@ std::ostream &operator<<(std::ostream &ostream, const Customer &customer) {
     ostream << "\tCustomer Name [" << customer.getFirstName() << " ";
     ostream << customer.getLastName() << "]";
     ostream << "\tID [" << customer.getID() << "] " << std::endl;
-    for (int i = 0; i < customer.historyLog.size(); i ++) {
-        ostream << "\t   " << customer.historyLog[i] << std::endl;
+    for (const auto & i : customer.historyLog /*int i = 0; i < customer.historyLog.size(); i ++ */) {
+        ostream << "\t   " << i << std::endl;
     }
 
     return ostream;
@@ -25,13 +25,13 @@ Customer::Customer() {
 
 Customer::~Customer() = default;
 
-Customer::Customer(std::string first, std::string second, std::string id) {
+Customer::Customer(std::string first, std::string second, const std::string & id) {
     setFirstName(std::move(first));
     setLastName(std::move(second));
     setCustomerID(std::move(id));
 }
 
-bool Customer::setCustomerID(std::string id) {
+bool Customer::setCustomerID(const std::string & id) {
     if (id.length() == ID_SIZE) {
         customerID = id;
         return true;
@@ -50,7 +50,7 @@ bool Customer::setLastName(std::string last) {
     return true;
 }
 
-bool Customer::setCustomer(std::string first, std::string last, std::string id) {
+bool Customer::setCustomer(std::string first, std::string last, const std::string & id) {
     return setFirstName(std::move(first)) &&
     setLastName(std::move(last)) &&
     setCustomerID(std::move(id));
@@ -68,15 +68,16 @@ std::string Customer::getLastName() const {
     return lName;
 }
 
+//[implement thad HASH]
 int Customer::hash() const {
     std::string str = customerID;
-    int retVal = 0;
-    for (int i = 0; i < str.size(); i++) {
-        retVal += str[i];
+    int ret_val = 0;
+    for (int i = 0 ; i < str.size(); i++ ) {
+        ret_val += str[i];
     }
-    return retVal;
+    return ret_val;
 }
 
-void Customer::updateHistory(std::string history) {
+void Customer::updateHistory(const std::string & history) {
     historyLog.push_back(history);
 }

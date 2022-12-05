@@ -5,11 +5,7 @@
 #include "Movie.h"
 
 Movie::Movie() {
-    other = NULL;
-}
-
-Movie::~Movie() {
-
+    other = nullptr;
 }
 
 std::ostream &operator<<(std::ostream &ostream, const Movie &movie) {

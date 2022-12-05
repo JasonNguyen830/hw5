@@ -4,13 +4,9 @@
 
 #include "Drama.h"
 
-Drama::Drama() {
+Drama::Drama() = default;
 
-}
-
-Drama::~Drama() {
-
-}
+Drama::~Drama() = default;
 
 char Drama::getChar() const {
     return 'D';

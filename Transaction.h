@@ -12,7 +12,7 @@
 class Transaction {
 public:
     Transaction();
-    ~Transaction();
+    ~Transaction() = default;
 
     void setMovie(std::set<Movie*> movieTree[]);
     virtual void execute() = 0;

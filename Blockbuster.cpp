@@ -4,15 +4,13 @@
 
 #include "Blockbuster.h"
 
-Blockbuster::Blockbuster() {
-
-}
+Blockbuster::Blockbuster() = default;
 
 Blockbuster::~Blockbuster() {
-    for (int i = 0; i < SIZE; i++) {
-        std::set<Movie*>::iterator it = movies[i].begin();
+    for (auto & movie : movies) {
+       auto it = movie.begin();
 
-        for (; it != movies[i].end(); it++) {
+        for (; it != movie.end(); it++) {
             Movie* del = *it;
             delete del;
         }

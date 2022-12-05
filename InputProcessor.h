@@ -26,7 +26,7 @@ class InputProcessor {
 public:
     enum MOVIES { COMEDY_ENUM, CLASSICS_ENUM, DRAMA_ENUM, END};
     InputProcessor();
-    ~InputProcessor();
+    ~InputProcessor() = default;
 
     void processMovies(std::set<Movie*> movies[]);
 

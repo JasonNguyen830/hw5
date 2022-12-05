@@ -10,13 +10,13 @@
 class MovieKey {
 public:
     MovieKey();
-    ~MovieKey();
+    ~MovieKey() = default;
     void setTitle(std::string title);
     void setMovie(Movie*& movie);
 
     Movie* getMovie() const;
     std::string getTitle() const;
-    bool operator==(const std::string rhs) const;
+    bool operator==(const std::string & rhs) const;
     int hash() const;
 private:
     std::string title;

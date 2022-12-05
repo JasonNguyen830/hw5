@@ -4,13 +4,7 @@
 
 #include "ReturnTransaction.h"
 
-ReturnTransaction::ReturnTransaction() {
-
-}
-
-ReturnTransaction::~ReturnTransaction() {
-
-}
+ReturnTransaction::ReturnTransaction() = default;
 
 void ReturnTransaction::execute() {
     if (movie != nullptr) {

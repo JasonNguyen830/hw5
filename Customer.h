@@ -16,12 +16,12 @@ class Customer {
 public:
     Customer();
     ~Customer();
-    Customer(std::string first, std::string second, std::string id);
+    Customer(std::string first, std::string second, const std::string & id);
 
-    bool setCustomerID(std::string id);
+    bool setCustomerID(const std::string & id);
     bool setFirstName(std::string first);
     bool setLastName(std::string last);
-    bool setCustomer(std::string first, std::string last, std::string id);
+    bool setCustomer(std::string first, std::string last, const std::string & id);
 
     std::string getID() const;
     std::string getFirstName() const;
@@ -29,7 +29,7 @@ public:
 
     int hash() const;
 
-    void updateHistory(std::string history);
+    void updateHistory(const std::string & history);
 private:
     std::string fName;
     std::string lName;

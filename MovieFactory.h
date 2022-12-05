@@ -16,7 +16,7 @@ const char DRAMA = 'D';
 class MovieFactory {
 public:
     MovieFactory();
-    ~MovieFactory();
+    ~MovieFactory() = default;
     static Movie* createMovie(const char type);
 };
 

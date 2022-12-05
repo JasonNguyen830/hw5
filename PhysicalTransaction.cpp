@@ -10,16 +10,16 @@ PhysicalTransaction::PhysicalTransaction() {
     customer = nullptr;
 }
 
-PhysicalTransaction::~PhysicalTransaction() {
-
-}
 
 void PhysicalTransaction::setCustomer(Customer &cust) {
     *customer = cust;
 }
 
 void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
-    std::string media, type, title, year;
+    std::string media;
+    std::string type; 
+    std::string title;
+    std::string year;
     istream >> media >> type; //double check
     istream.get();
 
@@ -36,7 +36,7 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         comedy->setTitle(title);
         comedy->setYear(year);
 
-        std::set<Movie*>::iterator it = movieTreeReference[0].begin();
+       auto /* std::set<Movie*>::iterator */ it = movieTreeReference[0].begin();
 
         for(; it != movieTreeReference[0].end(); it++) {
             Comedy one = *dynamic_cast<Comedy*>(*it);
@@ -49,19 +49,23 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         }
         delete comedy;
     } else if (type[0] == 'C') {
-        std::string day, year, fName, lName, input;
+        std::string day;
+        std::string year;
+        std::string f_name;
+        std::string l_name;
+        std::string input;
         Movie* classic = new Classic;
         getline(istream, input);
         std::stringstream  str(input);
 
         str >> day;
         str >> year;
-        str >> fName;
-        str >> lName;
-        std::string combine = fName + " " + lName + " " + day + " " + year;
+        str >> f_name;
+        str >> l_name;
+        std::string combine = f_name + " " + l_name + " " + day + " " + year;
         classic->setYear(combine);
 
-        std::set<Movie*>::iterator it = movieTreeReference[1].begin();
+        auto it = movieTreeReference[1].begin();
 
         for(; it != movieTreeReference[1].end(); it++) {
             Movie* check = *it;
@@ -72,7 +76,8 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         }
         delete classic;
     } else if (type[0] == 'D') {
-        std::string director, title;
+        std::string director;
+        std::string title;
         Movie* drama = new Drama;
         getline(istream, director, ',');
         istream.get();
@@ -80,7 +85,7 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         drama->setDirector(director);
         drama->setTitle(title);
 
-        std::set<Movie*>::iterator it = movieTreeReference[2].begin();
+        auto it = movieTreeReference[2].begin();
         for(; it != movieTreeReference[2].end(); it++) {
             Movie* check = *it;
             if (*drama == *check) {
@@ -90,7 +95,7 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         }
         delete drama;
     } else {
-        std::cout << type[0] << " is not a valid movie type" << std::endl;
+        std::cout << type[0] << "is not a valid movie type" << std::endl;
         success = false;
     }
 }

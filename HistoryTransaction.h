@@ -11,7 +11,7 @@
 class HistoryTransaction : public DisplayTransaction {
 public:
     HistoryTransaction();
-    ~HistoryTransaction();
+    ~HistoryTransaction() = default;
     virtual void execute();
     void setCustomer(Customer&);
     void displayCustomerHistory();

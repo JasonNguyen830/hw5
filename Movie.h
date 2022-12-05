@@ -14,7 +14,7 @@ class Movie {
 public:
     enum MOVIES {COMEDY, CLASSICS, DRAMA, END};
     Movie();
-    virtual ~Movie();
+    virtual ~Movie() = default;
 
     virtual bool setStock(int stock) = 0;
     virtual bool setDirector(std::string director) = 0;
