@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_HASHTABLE_H
 #define HW5_HASHTABLE_H

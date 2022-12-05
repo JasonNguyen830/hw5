@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_RETURNTRANSACTION_H
 #define HW5_RETURNTRANSACTION_H
@@ -11,11 +10,11 @@
 
 class ReturnTransaction: public PhysicalTransaction {
 public:
-    ReturnTransaction();
-    ~ReturnTransaction();
-    virtual void execute();
-    bool executeReturn(Movie& movie);
-    std::string getLogOfTrans() const;
+    ReturnTransaction(); // Constructor
+    ~ReturnTransaction(); // Deconstructor
+    virtual void execute(); // Execution method
+    bool executeReturn(Movie& movie); // Executes return policy
+    std::string getLogOfTrans() const; // Return transaction log
 };
 
 

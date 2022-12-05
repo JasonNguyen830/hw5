@@ -1,7 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
-
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 #ifndef HW5_MOVIEKEY_H
 #define HW5_MOVIEKEY_H
 #include "Movie.h"
@@ -9,18 +7,19 @@
 
 class MovieKey {
 public:
-    MovieKey();
-    ~MovieKey();
-    void setTitle(std::string title);
-    void setMovie(Movie*& movie);
+    MovieKey(); // Constructor
+    ~MovieKey(); // Deconstructor
+    void setTitle(std::string title); // Sets title
+    void setMovie(Movie*& movie); // Sets movie object
 
-    Movie* getMovie() const;
-    std::string getTitle() const;
+    Movie* getMovie() const; // Gets movie object
+    std::string getTitle() const; // Gets title
+    // Compares movie objects
     bool operator==(const std::string rhs) const;
-    int hash() const;
+    int hash() const; // Hash
 private:
-    std::string title;
-    Movie* movie;
+    std::string title; // title of movie
+    Movie* movie; // Movie object
 };
 
 

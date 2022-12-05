@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_PHYSICALTRANSACTION_H
 #define HW5_PHYSICALTRANSACTION_H
@@ -14,17 +13,19 @@
 
 class PhysicalTransaction : public Transaction {
 public:
-    PhysicalTransaction();
-    ~PhysicalTransaction();
-    virtual void execute() = 0;
-    void setCustomer(Customer& cust);
+    PhysicalTransaction(); // Constructor
+    ~PhysicalTransaction(); // Deconstructor
+    virtual void execute() = 0; // Execute property
+    void setCustomer(Customer& cust); // Sets customer
+    // Checks the media, type and performs respective actions
+    // dependent on the validity and typing
     void setStream(std::istream& istream, bool& success);
-    virtual std::string getLogOfTrans() const = 0;
+    virtual std::string getLogOfTrans() const = 0; // Log of transactions
 
 protected:
-    Movie* movie;
-    Customer* customer;
-    bool borrowed;
+    Movie* movie; // Movie object
+    Customer* customer; // Customer
+    bool borrowed; // True if movie is borrowed
 };
 
 

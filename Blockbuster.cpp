@@ -1,13 +1,14 @@
-//
-// Created by USER on 11/23/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "Blockbuster.h"
 
+// Constructor
 Blockbuster::Blockbuster() {
 
 }
 
+// Deconstructor
 Blockbuster::~Blockbuster() {
     for (int i = 0; i < SIZE; i++) {
         std::set<Movie*>::iterator it = movies[i].begin();
@@ -19,6 +20,7 @@ Blockbuster::~Blockbuster() {
     }
 }
 
+// Reads and process movies, customers, and commands
 void Blockbuster::execute() {
     input.processMovies(movies);
     input.processCustomers(customers);

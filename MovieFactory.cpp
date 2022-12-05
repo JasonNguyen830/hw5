@@ -1,17 +1,19 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "MovieFactory.h"
 
+// Constructor
 MovieFactory::MovieFactory() {
 
 }
 
+// Deconstructor
 MovieFactory::~MovieFactory() {
 
 }
 
+// Creates a movie object based on it's respective typing
 Movie *MovieFactory::createMovie(const char type) {
     Movie* retVal = nullptr;
     switch (type) {

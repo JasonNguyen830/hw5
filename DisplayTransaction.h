@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/30/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_DISPLAYTRANSACTION_H
 #define HW5_DISPLAYTRANSACTION_H
@@ -8,8 +7,8 @@
 
 class DisplayTransaction : public Transaction {
 public:
-    DisplayTransaction();
-    ~DisplayTransaction();
+    DisplayTransaction(); // Constructor
+    ~DisplayTransaction(); // Deconstructor
     virtual void execute() = 0;
 };
 

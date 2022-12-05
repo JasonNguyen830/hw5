@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_TRANSACTIONFACTORY_H
 #define HW5_TRANSACTIONFACTORY_H
@@ -14,6 +13,8 @@
 #include "DisplayTransaction.h"
 #include "HashTable.h"
 #include "Customer.h"
+
+// Valid commands
 const char BORROW = 'B';
 const char RETURN = 'R';
 const char HISTORY = 'H';
@@ -21,8 +22,9 @@ const char INVENTORY = 'I';
 
 class TransactionFactory {
 public:
-    TransactionFactory();
-    ~TransactionFactory();
+    TransactionFactory(); // Constructor
+    ~TransactionFactory(); // Deconstructor
+    // Creating a transaction
     static Transaction* createTransaction(std::istream& istream, std::set<Movie*> movies[], HashTable<Customer>& customers);
 };
 

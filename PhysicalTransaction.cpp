@@ -1,23 +1,27 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "PhysicalTransaction.h"
 
+// Constructor
 PhysicalTransaction::PhysicalTransaction() {
     borrowed = false;
     movie = nullptr;
     customer = nullptr;
 }
 
+// Deconstructor
 PhysicalTransaction::~PhysicalTransaction() {
 
 }
 
+// Sets the customer
 void PhysicalTransaction::setCustomer(Customer &cust) {
     *customer = cust;
 }
 
+// Checks the media, type and performs respective actions
+// dependent on the validity and typing
 void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
     std::string media, type, title, year;
     istream >> media >> type; //double check
@@ -53,13 +57,14 @@ void PhysicalTransaction::setStream(std::istream &istream, bool &success) {
         Movie* classic = new Classic;
         getline(istream, input);
         std::stringstream  str(input);
-
         str >> day;
         str >> year;
         str >> fName;
         str >> lName;
-        std::string combine = fName + " " + lName + " " + day + " " + year;
-        classic->setYear(combine);
+        std::string fullName = fName + " " + lName;
+        classic->setActor(fullName);
+        std::string releaseDate = day + " " + year;
+        classic->setReleaseDate(releaseDate);
 
         std::set<Movie*>::iterator it = movieTreeReference[1].begin();
 

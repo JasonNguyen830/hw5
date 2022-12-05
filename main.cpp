@@ -7,7 +7,7 @@
 #include <set>
 #include <algorithm>
 int main() {
-    Blockbuster blockbuster;
-    blockbuster.execute();
+    Blockbuster blockbuster; // Movie store :)
+    blockbuster.execute(); // Executes and reads txt files
     return 0;
 }

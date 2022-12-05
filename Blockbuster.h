@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/23/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_BLOCKBUSTER_H
 #define HW5_BLOCKBUSTER_H
@@ -14,18 +13,18 @@
 #include "Classic.h"
 #include "HashTable.h"
 
-const int SIZE = 3;
+const int SIZE = 3; // Number of types of movies
 
 class Blockbuster {
 public:
-    Blockbuster();
-    ~Blockbuster();
-    void execute();
+    Blockbuster(); // Constructor
+    ~Blockbuster(); // Deconstructor
+    void execute(); // Reads and process movies, customers, and commands
 
 private:
-    InputProcessor input;
-    std::set<Movie*> movies[SIZE];
-    HashTable<Customer> customers;
+    InputProcessor input; // Input source
+    std::set<Movie*> movies[SIZE]; // Movie collection
+    HashTable<Customer> customers; // Hashtable of customers
 };
 
 

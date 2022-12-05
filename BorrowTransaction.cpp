@@ -1,17 +1,19 @@
-//
-// Created by USER on 11/30/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "BorrowTransaction.h"
 
+// Constructor
 BorrowTransaction::BorrowTransaction() {
 
 }
 
+// Deconstructor
 BorrowTransaction::~BorrowTransaction() {
 
 }
 
+// Executes the borrow action
 void BorrowTransaction::execute() {
     if (movie != nullptr) {
         if(movie->getChar() == 'C') {
@@ -22,6 +24,8 @@ void BorrowTransaction::execute() {
     }
 }
 
+// Borrows a movie from the collection
+// Returns false if the movie has stock > 0
 bool BorrowTransaction::borrow(Movie &movie) {
     if (movie.getStock() > 0) {
         bool success = movie.setStock(movie.getStock() - 1);
@@ -36,6 +40,7 @@ bool BorrowTransaction::borrow(Movie &movie) {
     }
 }
 
+// Borrows a classic movie
 bool BorrowTransaction::borrowClassic(Movie &movie) {
     if (movie.getStock() == 0 && (movie.getOtherMovie() == nullptr || movie.getOtherMovie()->getStock()== 0)) {
         return false;
@@ -48,6 +53,7 @@ bool BorrowTransaction::borrowClassic(Movie &movie) {
     }
 }
 
+// Gets transaction log
 std::string BorrowTransaction::getLogOfTrans() const {
     if (movie != nullptr) {
         return "Borrowed " + movie->getTitle();

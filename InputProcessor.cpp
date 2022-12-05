@@ -1,17 +1,19 @@
-//
-// Created by USER on 11/23/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "InputProcessor.h"
 
+// Constructor
 InputProcessor::InputProcessor() {
 
 }
 
+// Deconstructor
 InputProcessor::~InputProcessor() {
 
 }
 
+// Process movies and sets up correct movie files
 void InputProcessor::processMovies(std::set<Movie *> movies[]) {
     std::fstream input;
     input.open("data4movies.txt");
@@ -45,9 +47,18 @@ void InputProcessor::processMovies(std::set<Movie *> movies[]) {
             getline(lineInput, readInput, ',');
             std::string year = readInput;
 
-            year.resize(year.size() - 1);
+            year.resize(year.size());
 
-            temp->setYear(year);
+            if (year.size() == 4) { // For non-classic movies
+                temp->setYear(year);
+            } else { // For classic movies
+                std::string val = getDate(year);
+                temp->setReleaseDate(val);
+                std::string actor = getActor(year);
+                temp->setActor(actor);
+                std::cout << actor << std::endl;
+            }
+
 
             std::set<Movie*>::iterator it;
             Movie* tempMovieComparator;
@@ -79,6 +90,7 @@ void InputProcessor::processMovies(std::set<Movie *> movies[]) {
     input.close();
 }
 
+// Process customers and sets up respective attributes
 void InputProcessor::processCustomers(HashTable<Customer> &customerContainer) {
     std::fstream input;
     input.open("data4customers.txt");
@@ -94,6 +106,7 @@ void InputProcessor::processCustomers(HashTable<Customer> &customerContainer) {
     input.close();
 }
 
+// Process commands to execute
 void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Customer> &customers) {
     if (movies == nullptr) {
         return;
@@ -114,4 +127,18 @@ void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Custo
         delete transaction;
     }
     input.close();
+}
+
+std::string InputProcessor::getDate(std::string input) {
+    int start = input.size() - 7;
+    int end  = input.size();
+    std::string retVal = input.substr(start, end);
+    return retVal;
+}
+
+std::string InputProcessor::getActor(std::string input) {
+    int start = 0;
+    int end  = input.size() - 7;
+    std::string retVal = input.substr(start, end);
+    return retVal;
 }

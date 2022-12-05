@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/30/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_BORROWTRANSACTION_H
 #define HW5_BORROWTRANSACTION_H
@@ -13,12 +12,12 @@
 
 class BorrowTransaction : public PhysicalTransaction {
 public:
-    BorrowTransaction();
-    ~BorrowTransaction();
-    virtual void execute();
-    bool borrow(Movie& movie);
-    bool borrowClassic(Movie& movie);
-    std::string getLogOfTrans() const;
+    BorrowTransaction(); // Constructor
+    ~BorrowTransaction(); // Deconstructor
+    void execute(); // Executes the borrow action
+    bool borrow(Movie& movie); // Borrows a movie
+    bool borrowClassic(Movie& movie); // Borrows classic movies
+    std::string getLogOfTrans() const; // Gets transaction log
 };
 
 

@@ -1,9 +1,9 @@
-//
-// Created by USER on 11/23/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_INPUTPROCESSOR_H
 #define HW5_INPUTPROCESSOR_H
+// Valid command values
 const char B = 'B';
 const char R = 'R';
 const char H = 'H';
@@ -25,14 +25,22 @@ const char I = 'I';
 class InputProcessor {
 public:
     enum MOVIES { COMEDY_ENUM, CLASSICS_ENUM, DRAMA_ENUM, END};
-    InputProcessor();
-    ~InputProcessor();
+    InputProcessor(); // Constructor
+    ~InputProcessor(); // Deconstructor
 
+    // Process movies
     void processMovies(std::set<Movie*> movies[]);
 
+    // Process customers
     void processCustomers(HashTable<Customer>&);
 
+    // Process commands to execute
     void processCommands(std::set<Movie*> movies[], HashTable<Customer>&);
+
+private:
+    //Helper functions to get values for classic movies
+    std::string getDate(std::string input);
+    std::string getActor(std::string input);
 };
 
 

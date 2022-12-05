@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_TRANSACTION_H
 #define HW5_TRANSACTION_H
@@ -11,14 +10,15 @@
 
 class Transaction {
 public:
-    Transaction();
-    ~Transaction();
+    Transaction(); // Constructor
+    ~Transaction(); // Deconstructor
 
+    // Sets up the movie
     void setMovie(std::set<Movie*> movieTree[]);
-    virtual void execute() = 0;
+    virtual void execute() = 0; // Execute functions
 
 protected:
-    std::set<Movie*>* movieTreeReference;
+    std::set<Movie*>* movieTreeReference; // Contains list of movies
 };
 
 

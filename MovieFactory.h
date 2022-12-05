@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_MOVIEFACTORY_H
 #define HW5_MOVIEFACTORY_H
@@ -9,15 +8,15 @@
 #include "Classic.h"
 #include "Drama.h"
 
-const char COMEDY = 'F';
-const char CLASSIC = 'C';
-const char DRAMA = 'D';
+const char COMEDY = 'F'; // Comedy
+const char CLASSIC = 'C'; // Classic
+const char DRAMA = 'D'; // Drama
 
 class MovieFactory {
 public:
-    MovieFactory();
-    ~MovieFactory();
-    static Movie* createMovie(const char type);
+    MovieFactory(); // Constructor
+    ~MovieFactory(); // Deconstructor
+    static Movie* createMovie(const char type); // Creates movie object
 };
 
 

@@ -1,17 +1,19 @@
-//
-// Created by USER on 11/28/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "TransactionFactory.h"
 
+// Constructor
 TransactionFactory::TransactionFactory() {
 
 }
 
+// Deconstructor
 TransactionFactory::~TransactionFactory() {
 
 }
 
+// Creates and sets up a transaction while attributing it to the respective customer and movie.
 Transaction *TransactionFactory::createTransaction(std::istream &istream, std::set<Movie *> movies[],
                                                    HashTable<Customer> &customers) {
     std::string type, title, year;

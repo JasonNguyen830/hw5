@@ -1,6 +1,5 @@
-//
-// Created by USER on 11/30/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #ifndef HW5_HISTORYTRANSACTION_H
 #define HW5_HISTORYTRANSACTION_H
@@ -10,13 +9,13 @@
 
 class HistoryTransaction : public DisplayTransaction {
 public:
-    HistoryTransaction();
-    ~HistoryTransaction();
-    virtual void execute();
-    void setCustomer(Customer&);
-    void displayCustomerHistory();
+    HistoryTransaction(); // Constructor
+    ~HistoryTransaction(); // Deconstructor
+    void execute();
+    void setCustomer(Customer&); // Sets the customer
+    void displayCustomerHistory(); // Displays the customer history
 private:
-    Customer* cust;
+    Customer* cust; // Customer object
 };
 
 

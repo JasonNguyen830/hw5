@@ -1,21 +1,24 @@
-//
-// Created by USER on 11/30/2022.
-//
+// Jason Nguyen + Thaddeus Gonzalez-Serna
+// HW 5
 
 #include "InventoryTransaction.h"
 
+// Constructor
 InventoryTransaction::InventoryTransaction() {
 
 }
 
+// Deconstructor
 InventoryTransaction::~InventoryTransaction() {
 
 }
 
+// Executes the inventory
 void InventoryTransaction::execute() {
     displayInventory(movieTreeReference, 3);
 }
 
+// Displays the inventory
 void InventoryTransaction::displayInventory(std::set<Movie *> *movies, int size) {
     std::cout << "Inventory: " << std::endl;
     for (int i = 0; i < size; i++) {
