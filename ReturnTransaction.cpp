@@ -25,7 +25,7 @@ bool ReturnTransaction::executeReturn(Movie &movie) {
     if (borrowed) {
         return movie.setStock(movie.getStock() + 1);
     } else {
-        std::cout << "Can't return " << movie.getTitle() << "; was not borrowed"std::endl;
+        std::cout << "Can't return " << movie.getTitle() << std::endl;
         return false;
     }
 }
