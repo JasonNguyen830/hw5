@@ -5,19 +5,12 @@
 
 // Constructor
 Comedy::Comedy(std::string title, std::string year) {
-    setTitle(title);
-    setYear(year);
+    title = std::move(title);
+    year  = std::move(year);
 }
 
 // Constructor
-Comedy::Comedy() {
-
-}
-
-// Deconstructor
-Comedy::~Comedy() {
-
-}
+Comedy::Comedy() = default;
 
 // Returns character of movie 'F'
 char Comedy::getChar() const {
@@ -26,25 +19,25 @@ char Comedy::getChar() const {
 
 // Sets the stock and returns true
 bool Comedy::setStock(int stock) {
-    this->stock = stock;
+    this->stock = std::move(stock);
     return true;
 }
 
 // Sets the director and returns true
 bool Comedy::setDirector(std::string director) {
-    this->director = director;
+    this->director = std::move(director);
     return true;
 }
 
 // Sets the title and returns true
 bool Comedy::setTitle(std::string title) {
-    this->title = title;
+    this->title = std::move(title);
     return true;
 }
 
 // Sets the year and returns true
 bool Comedy::setYear(std::string year) {
-    this->year = year;
+    this->year = std::move(year);
     return true;
 }
 
@@ -85,26 +78,37 @@ bool Comedy::operator!=(const Movie &movie) const {
 
 // Overloaded operator comparing movie alphabetization and year
 bool Comedy::operator>(const Movie &movie) const {
+
+    bool ret_val = false;
+
     if (title > movie.getTitle()) {
-        return true;
+        //return true;
+        ret_val = true;
     } else {
         if (year > movie.getYear()) {
-            return true;
+            //return true;
+            ret_val = true;
         }
     }
-    return false;
+    //return false;
+    return ret_val;
 }
 
 // Overloaded operator comparing movies
 bool Comedy::operator<(const Movie &movie) const {
+
+    bool ret_val = true;
+
     if (this == &movie) {
-        return false;
+        //return false;
+        ret_val = false;
     }
     if (this > &movie) {
-        return false;
+        //return false;
+        ret_val = false;
     }
 
-    return true;
+    return ret_val;
 }
 
 // Returns major actor (should be empty)

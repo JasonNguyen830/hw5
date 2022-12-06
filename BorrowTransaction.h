@@ -13,7 +13,7 @@
 class BorrowTransaction : public PhysicalTransaction {
 public:
     BorrowTransaction(); // Constructor
-    ~BorrowTransaction(); // Deconstructor
+    ~BorrowTransaction() = default; // Deconstructor
     void execute(); // Executes the borrow action
     bool borrow(Movie& movie); // Borrows a movie
     bool borrowClassic(Movie& movie); // Borrows classic movies

@@ -15,7 +15,7 @@ class Customer {
 
 public:
     Customer(); // Constructor
-    ~Customer(); // Deconstructor
+    ~Customer() = default; // Deconstructor
     //Constructor
     Customer(std::string first, std::string second, std::string id);
 

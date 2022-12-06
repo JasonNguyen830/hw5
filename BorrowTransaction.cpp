@@ -4,14 +4,7 @@
 #include "BorrowTransaction.h"
 
 // Constructor
-BorrowTransaction::BorrowTransaction() {
-
-}
-
-// Deconstructor
-BorrowTransaction::~BorrowTransaction() {
-
-}
+BorrowTransaction::BorrowTransaction() = default;
 
 // Executes the borrow action
 void BorrowTransaction::execute() {
@@ -48,8 +41,8 @@ bool BorrowTransaction::borrowClassic(Movie &movie) {
     if (movie.getStock() >0) {
         return movie.setStock(movie.getStock() - 1);
     } else {
-        int otherStock = movie.getOtherMovie()->getStock();
-        return movie.getOtherMovie()->setStock(otherStock - 1);
+        int other_stock = movie.getOtherMovie()->getStock();
+        return movie.getOtherMovie()->setStock(other_stock - 1);
     }
 }
 

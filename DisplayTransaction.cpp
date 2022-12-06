@@ -4,11 +4,4 @@
 #include "DisplayTransaction.h"
 
 // Constructor
-DisplayTransaction::DisplayTransaction() {
-
-}
-
-// Deconstructor
-DisplayTransaction::~DisplayTransaction() {
-
-}
+DisplayTransaction::DisplayTransaction() = default;

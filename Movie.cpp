@@ -5,12 +5,7 @@
 
 // Constructor
 Movie::Movie() {
-    other = NULL;
-}
-
-// Deconstructor
-Movie::~Movie() {
-
+    other = nullptr;
 }
 
 // Outputs the movie information for Comedy, Classic, and Drama movies

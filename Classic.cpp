@@ -4,14 +4,7 @@
 #include "Classic.h"
 
 // Constructor
-Classic::Classic() {
-
-}
-
-// Deconstructor
-Classic::~Classic() {
-
-}
+Classic::Classic() = default;
 
 // Gets character of classic movies 'C'
 char Classic::getChar() const {
@@ -26,19 +19,19 @@ bool Classic::setStock(int stock) {
 
 // Sets the director name
 bool Classic::setDirector(std::string director) {
-    this->director = director;
+    this->director = std::move(director);
     return false;
 }
 
 // Sets the title
 bool Classic::setTitle(std::string title) {
-    this->title = title;
+    this->title = std::move(title);
     return false;
 }
 
 // Sets the year
 bool Classic::setYear(std::string year) {
-    this->year = year;
+    this->year = std::move(year);
     return false;
 }
 
@@ -84,7 +77,7 @@ bool Classic::operator!=(const Movie &movie) const {
 // Returns true if the release date is greater than the movie release date
 // Returns true if the major actors is greater (first in alphabet) than movie actor
 bool Classic::operator>(const Movie &movie) const {
-    const Classic* movie2 = dynamic_cast<const Classic*>(&movie);
+    const auto *const movie2 = dynamic_cast<const Classic*>(&movie);
     if (releaseDate > movie2->releaseDate) {
         return true;
     } else {

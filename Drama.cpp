@@ -4,14 +4,7 @@
 #include "Drama.h"
 
 // Constructor
-Drama::Drama() {
-
-}
-
-// Deconstructor
-Drama::~Drama() {
-
-}
+Drama::Drama() = default;
 
 // Returns the character of movie 'D'
 char Drama::getChar() const {
@@ -26,19 +19,19 @@ bool Drama::setStock(int stock) {
 
 // Sets the director and returns true
 bool Drama::setDirector(std::string director) {
-    this->director = director;
+    this->director = std::move(director);
     return true;
 }
 
 // Sets title and returns true
 bool Drama::setTitle(std::string title) {
-    this->title = title;
+    this->title = std::move(title);
     return false;
 }
 
 // Sets year and returns true
 bool Drama::setYear(std::string year) {
-    this->year = year;
+    this->year = std::move(year);
     return false;
 }
 
@@ -79,26 +72,38 @@ bool Drama::operator!=(const Movie &movie) const {
 
 // Overloaded operator comparing movies alphabetization and year
 bool Drama::operator>(const Movie &movie) const {
+
+    bool ret_val = false;
+
     if (title > movie.getTitle()) {
-        return true;
+        //return true;
+        ret_val = true;
     } else {
         if (year > movie.getYear()) {
-            return true;
+            //return true;
+            ret_val = true;
         }
     }
-    return false;
+    //return false;
+    return ret_val;
 }
 
 // Overloaded operator comparing movies
 bool Drama::operator<(const Movie &movie) const {
+    
+    bool ret_val = true;
+
     if (this == &movie) {
-        return false;
+        //return false;
+        ret_val = false;
     }
     if (this > &movie) {
-        return false;
+        //return false;
+        ret_val = false;
     }
 
-    return true;
+    //return true;
+    return ret_val;
 }
 
 // Returns major actor/actress (should be empty)
@@ -113,12 +118,12 @@ std::string Drama::getReleaseDate() const {
 
 // Sets the major actor/actress and returns true
 bool Drama::setActor(std::string actor) {
-    this->majorActor = actor;
+    this->majorActor = std::move(actor);
     return true;
 }
 
 // Sets the release date and returns true
 bool Drama::setReleaseDate(std::string date) {
-    this->releaseDate = date;
+    this->releaseDate = std::move(date);
     return true;
 }

@@ -8,7 +8,7 @@
 class Drama : public Movie{
 public:
     Drama(); // Constructor
-    ~Drama(); // Deconstructor
+    ~Drama() = default; // Deconstructor
     char getChar() const; // Returns character of movie 'D'
 
     // Setter functions

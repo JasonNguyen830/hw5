@@ -4,16 +4,14 @@
 #include "Blockbuster.h"
 
 // Constructor
-Blockbuster::Blockbuster() {
-
-}
+Blockbuster::Blockbuster() = default;
 
 // Deconstructor
 Blockbuster::~Blockbuster() {
-    for (int i = 0; i < SIZE; i++) {
-        std::set<Movie*>::iterator it = movies[i].begin();
+    for (auto const & movie : movies /*int i = 0; i < SIZE; i++*/) {
+        auto it = movie.begin();
 
-        for (; it != movies[i].end(); it++) {
+        for (; it != movie.end(); it++) {
             Movie* del = *it;
             delete del;
         }

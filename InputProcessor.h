@@ -39,8 +39,8 @@ public:
 
 private:
     //Helper functions to get values for classic movies
-    std::string getDate(std::string input);
-    std::string getActor(std::string input);
+    static std::string getDate(std::string input);
+    static std::string getActor(std::string input);
 };
 
 

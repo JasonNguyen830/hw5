@@ -4,14 +4,7 @@
 #include "HistoryTransaction.h"
 
 // Constructor
-HistoryTransaction::HistoryTransaction() {
-
-}
-
-// Deconstructor
-HistoryTransaction::~HistoryTransaction() {
-
-}
+HistoryTransaction::HistoryTransaction() = default;
 
 // Displays the customer history
 void HistoryTransaction::execute() {

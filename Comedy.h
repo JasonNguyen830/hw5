@@ -12,7 +12,7 @@ class Comedy : public Movie{
 public:
     Comedy(std::string title, std::string year); //constructor
     Comedy(); // constructor
-    ~Comedy(); // deconstructor
+    ~Comedy() = default; // deconstructor
     char getChar() const; // Gets the character of movie 'F'
 
     // Setter functions

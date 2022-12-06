@@ -8,7 +8,7 @@
 class DisplayTransaction : public Transaction {
 public:
     DisplayTransaction(); // Constructor
-    ~DisplayTransaction(); // Deconstructor
+    ~DisplayTransaction() = default; // Deconstructor
     virtual void execute() = 0;
 };
 

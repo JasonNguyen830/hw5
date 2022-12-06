@@ -15,7 +15,7 @@ const char DRAMA = 'D'; // Drama
 class MovieFactory {
 public:
     MovieFactory(); // Constructor
-    ~MovieFactory(); // Deconstructor
+    ~MovieFactory() = default; // Deconstructor
     static Movie* createMovie(const char type); // Creates movie object
 };
 

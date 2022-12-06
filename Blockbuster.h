@@ -18,7 +18,7 @@ const int SIZE = 3; // Number of types of movies
 class Blockbuster {
 public:
     Blockbuster(); // Constructor
-    ~Blockbuster(); // Deconstructor
+    ~Blockbuster() ; // Deconstructor
     void execute(); // Reads and process movies, customers, and commands
 
 private:

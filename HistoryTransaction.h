@@ -10,7 +10,7 @@
 class HistoryTransaction : public DisplayTransaction {
 public:
     HistoryTransaction(); // Constructor
-    ~HistoryTransaction(); // Deconstructor
+    ~HistoryTransaction() = default; // Deconstructor
     void execute();
     void setCustomer(Customer&); // Sets the customer
     void displayCustomerHistory(); // Displays the customer history

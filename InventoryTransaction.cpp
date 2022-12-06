@@ -4,14 +4,7 @@
 #include "InventoryTransaction.h"
 
 // Constructor
-InventoryTransaction::InventoryTransaction() {
-
-}
-
-// Deconstructor
-InventoryTransaction::~InventoryTransaction() {
-
-}
+InventoryTransaction::InventoryTransaction() = default;
 
 // Executes the inventory
 void InventoryTransaction::execute() {

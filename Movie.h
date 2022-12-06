@@ -14,7 +14,7 @@ class Movie {
 public:
     enum MOVIES {COMEDY, CLASSICS, DRAMA, END};
     Movie(); // Constructor
-    virtual ~Movie(); // Deconstructor
+    virtual ~Movie() = default; // Deconstructor
 
     // Setter functions
     virtual bool setStock(int stock) = 0;

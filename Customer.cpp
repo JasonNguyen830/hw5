@@ -10,8 +10,9 @@ std::ostream &operator<<(std::ostream &ostream, const Customer &customer) {
     ostream << "\tCustomer Name [" << customer.getFirstName() << " ";
     ostream << customer.getLastName() << "]";
     ostream << "\tID [" << customer.getID() << "] " << std::endl;
-    for (int i = 0; i < customer.historyLog.size(); i ++) {
-        ostream << "\t   " << customer.historyLog[i] << std::endl;
+    
+    for (const auto & i : customer.historyLog /*int i = 0; i < customer.historyLog.size(); i ++ */) {
+        ostream << "\t   " << i /*customer.historyLog[i]*/ << std::endl;
     }
 
     return ostream;
@@ -24,8 +25,6 @@ Customer::Customer() {
     setCustomerID("");
 }
 
-// Deconstructor
-Customer::~Customer() = default;
 
 // Constructor
 Customer::Customer(std::string first, std::string second, std::string id) {

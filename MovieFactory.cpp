@@ -4,14 +4,7 @@
 #include "MovieFactory.h"
 
 // Constructor
-MovieFactory::MovieFactory() {
-
-}
-
-// Deconstructor
-MovieFactory::~MovieFactory() {
-
-}
+MovieFactory::MovieFactory() = default;
 
 // Creates a movie object based on it's respective typing
 Movie *MovieFactory::createMovie(const char type) {

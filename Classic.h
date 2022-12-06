@@ -11,7 +11,7 @@
 class Classic : public Movie {
 public:
     Classic(); // Constructor
-    ~Classic(); // Deconstructor
+    ~Classic() = default; // Deconstructor
     char getChar() const; // Gets character of classic movies 'C'
 
     bool setStock(int stock); // Sets the stock
