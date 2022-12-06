@@ -84,8 +84,8 @@ std::string Customer::getLastName() const {
 int Customer::hash() const {
     std::string str = customerID;
     int ret_val = 0;
-    for (int i = 0; i < str.size(); i++) {
-        ret_val += str[i];
+    for ( char i : str/*int i = 0; i < str.size(); i++ */ ) {
+        ret_val += i; //str[i];
     }
     return ret_val;
 }

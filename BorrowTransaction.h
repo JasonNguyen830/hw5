@@ -15,8 +15,8 @@ public:
     BorrowTransaction(); // Constructor
     ~BorrowTransaction() = default; // Deconstructor
     void execute(); // Executes the borrow action
-    bool borrow(Movie& movie); // Borrows a movie
-    bool borrowClassic(Movie& movie); // Borrows classic movies
+    bool borrow(Movie & movie); // Borrows a movie
+    static bool borrowClassic(Movie& movie); // Borrows classic movies
     std::string getLogOfTrans() const; // Gets transaction log
 };
 

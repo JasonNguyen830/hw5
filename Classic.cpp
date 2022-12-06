@@ -13,7 +13,9 @@ char Classic::getChar() const {
 
 // Sets the stock
 bool Classic::setStock(int stock) {
+    if(stock >= 0 ){
     this->stock = stock;
+    }
     return false;
 }
 

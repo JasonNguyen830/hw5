@@ -15,7 +15,7 @@ public:
     Movie* getMovie() const; // Gets movie object
     std::string getTitle() const; // Gets title
     // Compares movie objects
-    bool operator==(const std::string rhs) const;
+    bool operator==(const std::string & rhs) const;
     int hash() const; // Hash
 private:
     std::string title; // title of movie

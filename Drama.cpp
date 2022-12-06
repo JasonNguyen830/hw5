@@ -13,7 +13,9 @@ char Drama::getChar() const {
 
 // Sets the stock and returns true
 bool Drama::setStock(int stock) {
+    if(stock >= 0){
     this->stock = stock;
+    }
     return true;
 }
 

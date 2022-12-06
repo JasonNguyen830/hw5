@@ -19,7 +19,9 @@ char Comedy::getChar() const {
 
 // Sets the stock and returns true
 bool Comedy::setStock(int stock) {
+    if(stock >= 0){
     this->stock = std::move(stock);
+    }
     return true;
 }
 

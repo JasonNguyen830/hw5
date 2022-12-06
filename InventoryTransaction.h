@@ -18,7 +18,7 @@ public:
     ~InventoryTransaction() = default; // Deconstructor
     void execute(); // Executes the display inventory
     // Displays the inventory of movies
-    void displayInventory(std::set<Movie*> movies[], int size);
+    static void displayInventory(std::set<Movie*> movies[], int size);
 };
 
 

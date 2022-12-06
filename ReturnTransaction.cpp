@@ -15,12 +15,18 @@ void ReturnTransaction::execute() {
 
 // Executes the return transaction of the movie was borrowed
 bool ReturnTransaction::executeReturn(Movie &movie) {
+    bool ret_val = false;
+
     if (borrowed) {
-        return movie.setStock(movie.getStock() + 1);
+        //return movie.setStock(movie.getStock() + 1);
+        ret_val = movie.setStock(movie.getStock() + 1);
     } else {
         std::cout << "Can't return " << movie.getTitle() << std::endl;
-        return false;
+        //return false;
+        ret_val = false;
     }
+
+    return ret_val;
 }
 
 // Returns the movie transaction if movie was not null

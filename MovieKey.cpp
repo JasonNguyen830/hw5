@@ -2,7 +2,7 @@
 // HW 5
 
 #include "MovieKey.h"
-
+#include<iostream>
 // Constructor
 MovieKey::MovieKey() = default;
 
@@ -27,15 +27,16 @@ std::string MovieKey::getTitle() const {
 }
 
 // Returns true if movies and given argument are the same
-bool MovieKey::operator==(const std::string rhs) const {
+bool MovieKey::operator==(const std::string & rhs) const {
     return title == rhs;
 }
 
 // Hash
 int MovieKey::hash() const {
     int val = 0;
-    for (int i = 0; i <title.size(); i++) {
-        val += title[i];
+    for ( char i: title /*int i = 0; i < title.size(); i++ */ ) {
+        std::cout << "val "<< val <<std::endl;
+        val += i; // title[i];
     }
     return val;
 }

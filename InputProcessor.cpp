@@ -134,7 +134,7 @@ void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Custo
 //retieve date from line
 std::string InputProcessor::getDate(const std::string & input) {
     int start = input.size() - 8;
-    int end  = input.size()-18;
+    int end  = input.size()-15;
     std::string ret_val = input.substr(start, end);
     std::cout<<"input" <<input<<std::endl;
     std::cout << "getDate() value is: "<<ret_val <<"X"<< std::endl;
