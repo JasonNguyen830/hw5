@@ -78,14 +78,16 @@ bool Classic::operator!=(const Movie &movie) const {
 // Returns true if the major actors is greater (first in alphabet) than movie actor
 bool Classic::operator>(const Movie &movie) const {
     const auto *const movie2 = dynamic_cast<const Classic*>(&movie);
+
+    bool ret_val = false;
     if (releaseDate > movie2->releaseDate) {
-        return true;
+        ret_val =  true;
     } else {
         if (majorActor > movie2->majorActor) {
-            return true;
+            ret_val = true;
         }
     }
-    return false;
+    return ret_val;
 }
 
 // Operative overload for <

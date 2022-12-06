@@ -29,18 +29,18 @@ public:
     ~InputProcessor() = default; // Deconstructor
 
     // Process movies
-    void processMovies(std::set<Movie*> movies[]);
+    static void processMovies(std::set<Movie*> movies[]);
 
     // Process customers
-    void processCustomers(HashTable<Customer>&);
+    static void processCustomers(HashTable<Customer>&);
 
     // Process commands to execute
-    void processCommands(std::set<Movie*> movies[], HashTable<Customer>&);
+    static void processCommands(std::set<Movie*> movies[], HashTable<Customer>&);
 
 private:
     //Helper functions to get values for classic movies
-    static std::string getDate(std::string input);
-    static std::string getActor(std::string input);
+    static std::string getDate(const std::string & input);
+    static std::string getActor(const std::string & input);
 };
 
 

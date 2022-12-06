@@ -23,7 +23,7 @@ const char INVENTORY = 'I';
 class TransactionFactory {
 public:
     TransactionFactory(); // Constructor
-    ~TransactionFactory(); // Deconstructor
+    ~TransactionFactory() = default; // Deconstructor
     // Creating a transaction
     static Transaction* createTransaction(std::istream& istream, std::set<Movie*> movies[], HashTable<Customer>& customers);
 };

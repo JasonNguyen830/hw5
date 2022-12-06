@@ -17,13 +17,13 @@ public:
     Customer(); // Constructor
     ~Customer() = default; // Deconstructor
     //Constructor
-    Customer(std::string first, std::string second, std::string id);
+    Customer(std::string first, std::string second, const std::string & id);
 
     // Setter functions
-    bool setCustomerID(std::string id);
+    bool setCustomerID(const std::string & id);
     bool setFirstName(std::string first);
     bool setLastName(std::string last);
-    bool setCustomer(std::string first, std::string last, std::string id);
+    bool setCustomer(std::string first, std::string last, const std::string & id);
 
     // Getter functions
     std::string getID() const;
@@ -34,7 +34,7 @@ public:
     int hash() const;
 
     // Updates history log
-    void updateHistory(std::string history);
+    void updateHistory(std::string & history);
 private:
     std::string fName; // First Name
     std::string lName; // Last Name

@@ -8,20 +8,20 @@ MovieFactory::MovieFactory() = default;
 
 // Creates a movie object based on it's respective typing
 Movie *MovieFactory::createMovie(const char type) {
-    Movie* retVal = nullptr;
+    Movie* ret_val = nullptr;
     switch (type) {
         case COMEDY:
-            retVal = new Comedy;
+            ret_val = new Comedy;
             break;
         case CLASSIC:
-            retVal = new Classic;
+            ret_val = new Classic;
             break;
         case DRAMA:
-            retVal = new Drama;
+            ret_val = new Drama;
             break;
         default:
-            retVal = nullptr;
+            ret_val = nullptr;
             break;
     }
-    return retVal;
+    return  ret_val;
 }

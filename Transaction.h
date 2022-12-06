@@ -11,7 +11,7 @@
 class Transaction {
 public:
     Transaction(); // Constructor
-    ~Transaction(); // Deconstructor
+    ~Transaction() = default; // Deconstructor
 
     // Sets up the movie
     void setMovie(std::set<Movie*> movieTree[]);

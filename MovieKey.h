@@ -8,7 +8,7 @@
 class MovieKey {
 public:
     MovieKey(); // Constructor
-    ~MovieKey(); // Deconstructor
+    ~MovieKey() = default; // Deconstructor
     void setTitle(std::string title); // Sets title
     void setMovie(Movie*& movie); // Sets movie object
 

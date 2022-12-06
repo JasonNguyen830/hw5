@@ -4,14 +4,7 @@
 #include "ReturnTransaction.h"
 
 // Constructor
-ReturnTransaction::ReturnTransaction() {
-
-}
-
-// Deconstructor
-ReturnTransaction::~ReturnTransaction() {
-
-}
+ReturnTransaction::ReturnTransaction() = default;
 
 // Executes return transaction if the movie is not null
 void ReturnTransaction::execute() {

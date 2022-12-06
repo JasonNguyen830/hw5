@@ -27,20 +27,23 @@ Customer::Customer() {
 
 
 // Constructor
-Customer::Customer(std::string first, std::string second, std::string id) {
+Customer::Customer(std::string first, std::string second, const std::string & id) {
     setFirstName(std::move(first));
     setLastName(std::move(second));
     setCustomerID(std::move(id));
 }
 
 // Sets the customer id and returns true if the size is 4 or less
-bool Customer::setCustomerID(std::string id) {
+bool Customer::setCustomerID(const std::string & id) {
+
+    bool ret_val = false;
     if (id.length() == ID_SIZE) {
         customerID = id;
-        return true;
-    } else {
-        return false;
-    }
+        
+        ret_val =  true;
+    } 
+
+    return ret_val;
 }
 
 // Sets the first name of the customer
@@ -56,7 +59,7 @@ bool Customer::setLastName(std::string last) {
 }
 
 // Set the customer attributes
-bool Customer::setCustomer(std::string first, std::string last, std::string id) {
+bool Customer::setCustomer(std::string first, std::string last, const std::string & id) {
     return setFirstName(std::move(first)) &&
     setLastName(std::move(last)) &&
     setCustomerID(std::move(id));
@@ -80,14 +83,14 @@ std::string Customer::getLastName() const {
 // Hash method for customer
 int Customer::hash() const {
     std::string str = customerID;
-    int retVal = 0;
+    int ret_val = 0;
     for (int i = 0; i < str.size(); i++) {
-        retVal += str[i];
+        ret_val += str[i];
     }
-    return retVal;
+    return ret_val;
 }
 
 // Updates history log for customers
-void Customer::updateHistory(std::string history) {
+void Customer::updateHistory(std::string & history) {
     historyLog.push_back(history);
 }

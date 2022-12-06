@@ -5,12 +5,7 @@
 
 // Constructor
 Transaction::Transaction() {
-    movieTreeReference = NULL;
-}
-
-// Deconstructor
-Transaction::~Transaction() {
-
+    movieTreeReference = nullptr;
 }
 
 // Sets the movie

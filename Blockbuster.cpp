@@ -20,7 +20,7 @@ Blockbuster::~Blockbuster() {
 
 // Reads and process movies, customers, and commands
 void Blockbuster::execute() {
-    input.processMovies(movies);
-    input.processCustomers(customers);
-    input.processCommands(movies, customers);
+    InputProcessor::processMovies(movies);
+    InputProcessor::processCustomers(customers);
+    InputProcessor::processCommands(movies, customers);
 }

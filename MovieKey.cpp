@@ -4,18 +4,11 @@
 #include "MovieKey.h"
 
 // Constructor
-MovieKey::MovieKey() {
-
-}
-
-// Deconstructor
-MovieKey::~MovieKey() {
-
-}
+MovieKey::MovieKey() = default;
 
 // Sets the title
 void MovieKey::setTitle(std::string title) {
-    this->title = title;
+    this->title = std::move(title);
 }
 
 // Sets the movie

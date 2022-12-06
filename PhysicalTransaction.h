@@ -14,7 +14,7 @@
 class PhysicalTransaction : public Transaction {
 public:
     PhysicalTransaction(); // Constructor
-    ~PhysicalTransaction(); // Deconstructor
+    ~PhysicalTransaction() = default; // Deconstructor
     virtual void execute() = 0; // Execute property
     void setCustomer(Customer& cust); // Sets customer
     // Checks the media, type and performs respective actions

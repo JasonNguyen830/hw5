@@ -11,7 +11,7 @@
 class ReturnTransaction: public PhysicalTransaction {
 public:
     ReturnTransaction(); // Constructor
-    ~ReturnTransaction(); // Deconstructor
+    ~ReturnTransaction() = default; // Deconstructor
     virtual void execute(); // Execution method
     bool executeReturn(Movie& movie); // Executes return policy
     std::string getLogOfTrans() const; // Return transaction log

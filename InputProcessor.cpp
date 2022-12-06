@@ -60,7 +60,7 @@ void InputProcessor::processMovies(std::set<Movie *> movies[]) {
 
 
             std::set<Movie*>::iterator it;
-            Movie* tempMovieComparator;
+            Movie* temp_movie_comparator;
             switch (temp->getChar()) {
                 case COMEDY:
                     movies[COMEDY_ENUM].insert(temp);
@@ -68,10 +68,10 @@ void InputProcessor::processMovies(std::set<Movie *> movies[]) {
                 case CLASSIC:
                     it = movies[CLASSICS_ENUM].begin();
                     for (; it != movies[CLASSICS_ENUM].end(); it++) {
-                        tempMovieComparator = *it;
-                        if (*temp == *tempMovieComparator){
-                            temp->setOtherMovie(tempMovieComparator);
-                            tempMovieComparator->setOtherMovie(temp);
+                        temp_movie_comparator = *it;
+                        if (*temp == *temp_movie_comparator){
+                            temp->setOtherMovie(temp_movie_comparator);
+                            temp_movie_comparator->setOtherMovie(temp);
                         }
                     }
 
@@ -132,7 +132,7 @@ void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Custo
 }
 
 //retieve date from line
-std::string InputProcessor::getDate(std::string input) {
+std::string InputProcessor::getDate(const std::string & input) {
     int start = input.size() - 8;
     int end  = input.size()-18;
     std::string ret_val = input.substr(start, end);
@@ -142,7 +142,7 @@ std::string InputProcessor::getDate(std::string input) {
 }
 
 //reteive actor from a line
-    std::string InputProcessor::getActor(std::string input) {
+    std::string InputProcessor::getActor(const std::string & input) {
     int start = 0;
     int end  = input.size() - 4;
     std::string ret_val = input.substr(start, end);
