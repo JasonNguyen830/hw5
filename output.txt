@@ -1,0 +1,2095 @@
+Mon Dec  5 23:55:33 PST 2022
+Linux csslab2 4.18.0-372.32.1.el8_6.x86_64 #1 SMP Thu Oct 27 15:18:36 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+uid=1106166(thadsern) gid=2121106166(thadsern) groups=2121106166(thadsern),605559(lab-access)
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+InputProcessor.cpp: In static member function ‘static void InputProcessor::processCommands(std::set<Movie*>*, HashTable<Customer>&)’:
+InputProcessor.cpp:129:16: warning: deleting object of abstract class type ‘Transaction’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+         delete transaction;
+                ^~~~~~~~~~~
+=====================================================
+2. Runs and produces correct output
+=====================================================
+year1993X
+year1988X
+year1988X
+year2000X
+year1977X
+year1989X
+year1967X
+year1993X
+year2003X
+year2000X
+year1996X
+year1991X
+year1992X
+year1978X
+year1991X
+year1998X
+Inventory: 
+_______________________
+Comedy 
+_______________________
+	Stock [10] 
+	Director [Nora Ephron] 
+	Title [Sleepless in Seattle] 
+	Year [1993] 
+
+	Stock [10] 
+	Director [Woody Allen] 
+	Title [Annie Hall] 
+	Year [1977] 
+
+	Stock [10] 
+	Director [Rob Reiner] 
+	Title [When Harry Met Sally] 
+	Year [1989] 
+
+	Stock [10] 
+	Director [Gore Verbinski] 
+	Title [Pirates of the Caribbean] 
+	Year [2003] 
+
+	Stock [10] 
+	Director [Different Years] 
+	Title [Pirates of the Caribbean] 
+	Year [2000] 
+
+	Stock [10] 
+	Director [Joel Coen] 
+	Title [Fargo] 
+	Year [1996] 
+
+	Stock [10] 
+	Director [John Landis] 
+	Title [National Lampoon's Animal House] 
+	Year [1978] 
+
+	Stock [10] 
+	Director [Nora Ephron] 
+	Title [You've Got Mail] 
+	Year [1998] 
+
+_______________________
+Classic 
+_______________________
+	Stock [10] 
+	Director [Michael Curtiz] 
+	Title [Casablanca] 
+	Major Actor/Actress [Ingrid Bergman] 
+	Release Date [8 1942] 
+
+	Stock [10] 
+	Director [Michael Curtiz] 
+	Title [Casablanca] 
+	Major Actor/Actress [Humphrey Bogart] 
+	Release Date [8 1942] 
+
+	Stock [10] 
+	Director [Victor Fleming] 
+	Title [The Wizard of Oz] 
+	Major Actor/Actress [Judy Garland] 
+	Release Date [7 1939] 
+
+	Stock [10] 
+	Director [Hal Ashby] 
+	Title [Harold and Maude] 
+	Major Actor/Actress [Ruth Gordon] 
+	Release Date [3 1971] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [Holiday] 
+	Major Actor/Actress [Katherine Hepburn] 
+	Release Date [9 1938] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [Holiday] 
+	Major Actor/Actress [Cary Grant] 
+	Release Date [9 1938] 
+
+	Stock [10] 
+	Director [Victor Fleming] 
+	Title [Gone With the Wind] 
+	Major Actor/Actress [Vivien Leigh] 
+	Release Date [2 1939] 
+
+	Stock [10] 
+	Director [Victor Fleming] 
+	Title [Gone With the Wind] 
+	Major Actor/Actress [Clark Gable] 
+	Release Date [2 1939] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [The Philadelphia Story] 
+	Major Actor/Actress [Katherine Hepburn] 
+	Release Date [5 1940] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [The Philadelphia Story] 
+	Major Actor/Actress [Cary Grant] 
+	Release Date [5 1940] 
+
+	Stock [10] 
+	Director [John Huston] 
+	Title [The Maltese Falcon] 
+	Major Actor/Actress [Humphrey Bogart] 
+	Release Date [10 1941] 
+
+	Stock [10] 
+	Director [Frank Capra] 
+	Title [It's a Wonderful Life] 
+	Major Actor/Actress [James Steward] 
+	Release Date [11 1946] 
+
+	Stock [10] 
+	Director [Frank Capra] 
+	Title [It's a Wonderful Life] 
+	Major Actor/Actress [Donna Reed] 
+	Release Date [11 1946] 
+
+	Stock [10] 
+	Director [Stanley Kubrick] 
+	Title [A Clockwork Orange] 
+	Major Actor/Actress [Malcolm McDowell] 
+	Release Date [2 1971] 
+
+_______________________
+Drama 
+_______________________
+	Stock [10] 
+	Director [Barry Levinson] 
+	Title [Good Morning Vietnam] 
+	Year [1988] 
+
+	Stock [10] 
+	Director [Barry Levinson] 
+	Title [Same Director Good Morning Vietnam] 
+	Year [1988] 
+
+	Stock [10] 
+	Director [Gus Van Sant] 
+	Title [Good Will Hunting] 
+	Year [2000] 
+
+	Stock [10] 
+	Director [Phillippe De Broca] 
+	Title [King of Hearts] 
+	Year [1967] 
+
+	Stock [10] 
+	Director [Steven Spielberg] 
+	Title [Schindler's List] 
+	Year [1993] 
+
+	Stock [10] 
+	Director [Jonathan Demme] 
+	Title [Silence of the Lambs] 
+	Year [1991] 
+
+	Stock [10] 
+	Director [Clint Eastwood] 
+	Title [Unforgiven] 
+	Year [1992] 
+
+	Stock [10] 
+	Director [Nancy Savoca] 
+	Title [Dogfight] 
+	Year [1991] 
+
+	Customer Name [Minnie Mouse]	ID [1000] 
+
+	Customer Name [Freddie Frog]	ID [5000] 
+
+	Customer Name [Wally Wacky]	ID [8000] 
+
+Can't return Casablanca
+Z is not a valid movie type
+Can't return Casablanca
+Can't return Casablanca
+Can't return You've Got Mail
+X is an invalid transaction command
+Can't return Casablanca
+Z is an invalid transaction command
+Invalid media. Available: DVD's (D)
+Inventory: 
+_______________________
+Comedy 
+_______________________
+	Stock [9] 
+	Director [Nora Ephron] 
+	Title [Sleepless in Seattle] 
+	Year [1993] 
+
+	Stock [9] 
+	Director [Woody Allen] 
+	Title [Annie Hall] 
+	Year [1977] 
+
+	Stock [9] 
+	Director [Rob Reiner] 
+	Title [When Harry Met Sally] 
+	Year [1989] 
+
+	Stock [10] 
+	Director [Gore Verbinski] 
+	Title [Pirates of the Caribbean] 
+	Year [2003] 
+
+	Stock [10] 
+	Director [Different Years] 
+	Title [Pirates of the Caribbean] 
+	Year [2000] 
+
+	Stock [9] 
+	Director [Joel Coen] 
+	Title [Fargo] 
+	Year [1996] 
+
+	Stock [9] 
+	Director [John Landis] 
+	Title [National Lampoon's Animal House] 
+	Year [1978] 
+
+	Stock [8] 
+	Director [Nora Ephron] 
+	Title [You've Got Mail] 
+	Year [1998] 
+
+_______________________
+Classic 
+_______________________
+	Stock [0] 
+	Director [Michael Curtiz] 
+	Title [Casablanca] 
+	Major Actor/Actress [Ingrid Bergman] 
+	Release Date [8 1942] 
+
+	Stock [0] 
+	Director [Michael Curtiz] 
+	Title [Casablanca] 
+	Major Actor/Actress [Humphrey Bogart] 
+	Release Date [8 1942] 
+
+	Stock [10] 
+	Director [Victor Fleming] 
+	Title [The Wizard of Oz] 
+	Major Actor/Actress [Judy Garland] 
+	Release Date [7 1939] 
+
+	Stock [10] 
+	Director [Hal Ashby] 
+	Title [Harold and Maude] 
+	Major Actor/Actress [Ruth Gordon] 
+	Release Date [3 1971] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [Holiday] 
+	Major Actor/Actress [Katherine Hepburn] 
+	Release Date [9 1938] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [Holiday] 
+	Major Actor/Actress [Cary Grant] 
+	Release Date [9 1938] 
+
+	Stock [10] 
+	Director [Victor Fleming] 
+	Title [Gone With the Wind] 
+	Major Actor/Actress [Vivien Leigh] 
+	Release Date [2 1939] 
+
+	Stock [10] 
+	Director [Victor Fleming] 
+	Title [Gone With the Wind] 
+	Major Actor/Actress [Clark Gable] 
+	Release Date [2 1939] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [The Philadelphia Story] 
+	Major Actor/Actress [Katherine Hepburn] 
+	Release Date [5 1940] 
+
+	Stock [10] 
+	Director [George Cukor] 
+	Title [The Philadelphia Story] 
+	Major Actor/Actress [Cary Grant] 
+	Release Date [5 1940] 
+
+	Stock [10] 
+	Director [John Huston] 
+	Title [The Maltese Falcon] 
+	Major Actor/Actress [Humphrey Bogart] 
+	Release Date [10 1941] 
+
+	Stock [10] 
+	Director [Frank Capra] 
+	Title [It's a Wonderful Life] 
+	Major Actor/Actress [James Steward] 
+	Release Date [11 1946] 
+
+	Stock [10] 
+	Director [Frank Capra] 
+	Title [It's a Wonderful Life] 
+	Major Actor/Actress [Donna Reed] 
+	Release Date [11 1946] 
+
+	Stock [10] 
+	Director [Stanley Kubrick] 
+	Title [A Clockwork Orange] 
+	Major Actor/Actress [Malcolm McDowell] 
+	Release Date [2 1971] 
+
+_______________________
+Drama 
+_______________________
+	Stock [9] 
+	Director [Barry Levinson] 
+	Title [Good Morning Vietnam] 
+	Year [1988] 
+
+	Stock [10] 
+	Director [Barry Levinson] 
+	Title [Same Director Good Morning Vietnam] 
+	Year [1988] 
+
+	Stock [9] 
+	Director [Gus Van Sant] 
+	Title [Good Will Hunting] 
+	Year [2000] 
+
+	Stock [9] 
+	Director [Phillippe De Broca] 
+	Title [King of Hearts] 
+	Year [1967] 
+
+	Stock [9] 
+	Director [Steven Spielberg] 
+	Title [Schindler's List] 
+	Year [1993] 
+
+	Stock [9] 
+	Director [Jonathan Demme] 
+	Title [Silence of the Lambs] 
+	Year [1991] 
+
+	Stock [9] 
+	Director [Clint Eastwood] 
+	Title [Unforgiven] 
+	Year [1992] 
+
+	Stock [8] 
+	Director [Nancy Savoca] 
+	Title [Dogfight] 
+	Year [1991] 
+
+	Customer Name [Minnie Mouse]	ID [1000] 
+	   Borrowed Good Morning Vietnam
+	   Borrowed Casablanca
+	   Borrowed Good Will Hunting
+	   Borrowed Casablanca
+	   Borrowed Casablanca
+	   
+	   
+
+	Customer Name [Mickey Mouse]	ID [1111] 
+	   Borrowed Casablanca
+	   Borrowed Casablanca
+	   Borrowed Casablanca
+	   Borrowed Casablanca
+
+	Customer Name [Freddie Frog]	ID [5000] 
+	   Borrowed Casablanca
+	   Returned Casablanca
+	   Borrowed Casablanca
+	   Returned Casablanca
+	   Borrowed Casablanca
+	   Returned Casablanca
+	   Borrowed Casablanca
+
+	Customer Name [Wally Wacky]	ID [8000] 
+	   Borrowed You've Got Mail
+	   Returned You've Got Mail
+	   Borrowed Casablanca
+	   Borrowed Casablanca
+	   Borrowed National Lampoon's Animal House
+
+	Customer Name [Porky Pig]	ID [8888] 
+	   Borrowed Annie Hall
+	   Borrowed When Harry Met Sally
+	   Borrowed Silence of the Lambs
+	   Borrowed Dogfight
+	   Borrowed Casablanca
+
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+16561 warnings generated.
+33079 warnings generated.
+45210 warnings generated.
+57341 warnings generated.
+69714 warnings generated.
+85103 warnings generated.
+96174 warnings generated.
+112339 warnings generated.
+128936 warnings generated.
+144337 warnings generated.
+160895 warnings generated.
+171941 warnings generated.
+184110 warnings generated.
+195160 warnings generated.
+211700 warnings generated.
+228218 warnings generated.
+243606 warnings generated.
+260148 warnings generated.
+Suppressed 260148 warnings (260147 in non-user code, 1 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./Blockbuster.cpp
+11,12c11,12
+<     for (auto const & movie : movies /*int i = 0; i < SIZE; i++*/) {
+<         auto it = movie.begin();
+---
+>   for (auto const &movie : movies /*int i = 0; i < SIZE; i++*/) {
+>     auto it = movie.begin();
+14,17c14,16
+<         for (; it != movie.end(); it++) {
+<             Movie* del = *it;
+<             delete del;
+<         }
+---
+>     for (; it != movie.end(); it++) {
+>       Movie *del = *it;
+>       delete del;
+18a18
+>   }
+23,25c23,25
+<     InputProcessor::processMovies(movies);
+<     InputProcessor::processCustomers(customers);
+<     InputProcessor::processCommands(movies, customers);
+---
+>   InputProcessor::processMovies(movies);
+>   InputProcessor::processCustomers(customers);
+>   InputProcessor::processCommands(movies, customers);
+Running clang-format on ./BorrowTransaction.cpp
+11,16c11,15
+<     if (movie != nullptr) {
+<         if(movie->getChar() == 'C') {
+<             borrowClassic(*movie);
+<         } else {
+<             borrow(*movie);
+<         }
+---
+>   if (movie != nullptr) {
+>     if (movie->getChar() == 'C') {
+>       borrowClassic(*movie);
+>     } else {
+>       borrow(*movie);
+17a17
+>   }
+23,30c23,29
+<     bool ret_val = false;
+<     if (movie.getStock() > 0) {
+<         bool success = movie.setStock(movie.getStock() - 1);
+<         if (success) {
+<             borrowed = true;
+<             //return true;
+<             ret_val = true;
+<         } 
+---
+>   bool ret_val = false;
+>   if (movie.getStock() > 0) {
+>     bool success = movie.setStock(movie.getStock() - 1);
+>     if (success) {
+>       borrowed = true;
+>       // return true;
+>       ret_val = true;
+32c31,32
+<     return ret_val;
+---
+>   }
+>   return ret_val;
+37c37
+<     bool ret_val = false;
+---
+>   bool ret_val = false;
+39,51c39,53
+<     bool not_available = movie.getStock() == 0 && (movie.getOtherMovie() == nullptr || movie.getOtherMovie()->getStock()== 0);
+<     if (not_available) {
+<         //return false;
+<         ret_val = false;
+<     }
+<     if (movie.getStock() > 0 && !not_available ) {
+<         //return movie.setStock(movie.getStock() - 1);
+<         ret_val = movie.setStock(movie.getStock() - 1);
+<     } else {
+<         int other_stock = movie.getOtherMovie()->getStock();
+<         //return movie.getOtherMovie()->setStock(other_stock - 1);
+<         ret_val = movie.getOtherMovie()->setStock(other_stock - 1);
+<     }
+---
+>   bool not_available =
+>       movie.getStock() == 0 && (movie.getOtherMovie() == nullptr ||
+>                                 movie.getOtherMovie()->getStock() == 0);
+>   if (not_available) {
+>     // return false;
+>     ret_val = false;
+>   }
+>   if (movie.getStock() > 0 && !not_available) {
+>     // return movie.setStock(movie.getStock() - 1);
+>     ret_val = movie.setStock(movie.getStock() - 1);
+>   } else {
+>     int other_stock = movie.getOtherMovie()->getStock();
+>     // return movie.getOtherMovie()->setStock(other_stock - 1);
+>     ret_val = movie.getOtherMovie()->setStock(other_stock - 1);
+>   }
+53c55
+<     return ret_val;
+---
+>   return ret_val;
+58,61c60,63
+<     if (movie != nullptr) {
+<         return "Borrowed " + movie->getTitle();
+<     }
+<     return "";
+---
+>   if (movie != nullptr) {
+>     return "Borrowed " + movie->getTitle();
+>   }
+>   return "";
+Running clang-format on ./Classic.cpp
+10,12c10
+< char Classic::getChar() const {
+<     return 'C';
+< }
+---
+> char Classic::getChar() const { return 'C'; }
+16c14
+<     if(stock >= 0 ){
+---
+>   if (stock >= 0) {
+18,19c16,17
+<     }
+<     return false;
+---
+>   }
+>   return false;
+24,25c22,23
+<     this->director = std::move(director);
+<     return false;
+---
+>   this->director = std::move(director);
+>   return false;
+30,31c28,29
+<     this->title = std::move(title);
+<     return false;
+---
+>   this->title = std::move(title);
+>   return false;
+36,37c34,35
+<     this->year = std::move(year);
+<     return false;
+---
+>   this->year = std::move(year);
+>   return false;
+41,43c39
+< int Classic::getStock() const {
+<     return this->stock;
+< }
+---
+> int Classic::getStock() const { return this->stock; }
+46,48c42
+< std::string Classic::getDirector() const {
+<     return this->director;
+< }
+---
+> std::string Classic::getDirector() const { return this->director; }
+51,53c45
+< std::string Classic::getTitle() const {
+<     return this->title;
+< }
+---
+> std::string Classic::getTitle() const { return this->title; }
+56,58c48
+< std::string Classic::getYear() const {
+<     return this->year;
+< }
+---
+> std::string Classic::getYear() const { return this->year; }
+62c52
+<     return this->majorActor + " " + this->releaseDate;
+---
+>   return this->majorActor + " " + this->releaseDate;
+68,69c58
+<     return (director == movie.getDirector()) &&
+<     (title == movie.getTitle());
+---
+>   return (director == movie.getDirector()) && (title == movie.getTitle());
+74,76c63
+< bool Classic::operator!=(const Movie &movie) const {
+<     return this != &movie;
+< }
+---
+> bool Classic::operator!=(const Movie &movie) const { return this != &movie; }
+80c67,68
+< // Returns true if the major actors is greater (first in alphabet) than movie actor
+---
+> // Returns true if the major actors is greater (first in alphabet) than movie
+> // actor
+82c70
+<     const auto *const movie2 = dynamic_cast<const Classic*>(&movie);
+---
+>   const auto *const movie2 = dynamic_cast<const Classic *>(&movie);
+84,90c72,77
+<     bool ret_val = false;
+<     if (releaseDate > movie2->releaseDate) {
+<         ret_val =  true;
+<     } else {
+<         if (majorActor > movie2->majorActor) {
+<             ret_val = true;
+<         }
+---
+>   bool ret_val = false;
+>   if (releaseDate > movie2->releaseDate) {
+>     ret_val = true;
+>   } else {
+>     if (majorActor > movie2->majorActor) {
+>       ret_val = true;
+92c79,80
+<     return ret_val;
+---
+>   }
+>   return ret_val;
+96c84,85
+< // Returns false if movies are the same, or if current movie is greater than given movie
+---
+> // Returns false if movies are the same, or if current movie is greater than
+> // given movie
+98,103c87,92
+<     if (this == &movie) {
+<         return false;
+<     }
+<     if (this > &movie) {
+<         return false;
+<     }
+---
+>   if (this == &movie) {
+>     return false;
+>   }
+>   if (this > &movie) {
+>     return false;
+>   }
+105c94
+<     return true;
+---
+>   return true;
+109,111c98
+< std::string Classic::getMajor() const {
+<     return this->majorActor;
+< }
+---
+> std::string Classic::getMajor() const { return this->majorActor; }
+114,116c101
+< std::string Classic::getReleaseDate() const {
+<     return this->releaseDate;
+< }
+---
+> std::string Classic::getReleaseDate() const { return this->releaseDate; }
+120,121c105,106
+<     this->majorActor = actor;
+<     return true;
+---
+>   this->majorActor = actor;
+>   return true;
+126,127c111,112
+<     this->releaseDate = date;
+<     return true;
+---
+>   this->releaseDate = date;
+>   return true;
+Running clang-format on ./Comedy.cpp
+8,9c8,9
+<     title = std::move(title);
+<     year  = std::move(year);
+---
+>   title = std::move(title);
+>   year = std::move(year);
+16,18c16
+< char Comedy::getChar() const {
+<     return 'F';
+< }
+---
+> char Comedy::getChar() const { return 'F'; }
+22c20
+<     if(stock >= 0){
+---
+>   if (stock >= 0) {
+24,25c22,23
+<     }
+<     return true;
+---
+>   }
+>   return true;
+30,31c28,29
+<     this->director = std::move(director);
+<     return true;
+---
+>   this->director = std::move(director);
+>   return true;
+36,37c34,35
+<     this->title = std::move(title);
+<     return true;
+---
+>   this->title = std::move(title);
+>   return true;
+42,43c40,41
+<     this->year = std::move(year);
+<     return true;
+---
+>   this->year = std::move(year);
+>   return true;
+47,49c45
+< int Comedy::getStock() const {
+<     return this->stock;
+< }
+---
+> int Comedy::getStock() const { return this->stock; }
+52,54c48
+< std::string Comedy::getDirector() const {
+<     return this->director;
+< }
+---
+> std::string Comedy::getDirector() const { return this->director; }
+57,59c51
+< std::string Comedy::getTitle() const {
+<     return this->title;
+< }
+---
+> std::string Comedy::getTitle() const { return this->title; }
+62,64c54
+< std::string Comedy::getYear() const {
+<     return this->year;
+< }
+---
+> std::string Comedy::getYear() const { return this->year; }
+67,69c57
+< std::string Comedy::getLog() const {
+<     return getTitle() + " " + getYear();
+< }
+---
+> std::string Comedy::getLog() const { return getTitle() + " " + getYear(); }
+73c61
+<     return (title == movie.getTitle()) && (year == movie.getYear());
+---
+>   return (title == movie.getTitle()) && (year == movie.getYear());
+77,79c65
+< bool Comedy::operator!=(const Movie &movie) const {
+<     return (this == &movie);
+< }
+---
+> bool Comedy::operator!=(const Movie &movie) const { return (this == &movie); }
+84c70
+<     bool ret_val = false;
+---
+>   bool ret_val = false;
+86,93c72,78
+<     if (title > movie.getTitle()) {
+<         //return true;
+<         ret_val = true;
+<     } else {
+<         if (year > movie.getYear()) {
+<             //return true;
+<             ret_val = true;
+<         }
+---
+>   if (title > movie.getTitle()) {
+>     // return true;
+>     ret_val = true;
+>   } else {
+>     if (year > movie.getYear()) {
+>       // return true;
+>       ret_val = true;
+95,96c80,82
+<     //return false;
+<     return ret_val;
+---
+>   }
+>   // return false;
+>   return ret_val;
+102c88
+<     bool ret_val = true;
+---
+>   bool ret_val = true;
+104,111c90,97
+<     if (this == &movie) {
+<         //return false;
+<         ret_val = false;
+<     }
+<     if (this > &movie) {
+<         //return false;
+<         ret_val = false;
+<     }
+---
+>   if (this == &movie) {
+>     // return false;
+>     ret_val = false;
+>   }
+>   if (this > &movie) {
+>     // return false;
+>     ret_val = false;
+>   }
+113c99
+<     return ret_val;
+---
+>   return ret_val;
+117,119c103
+< std::string Comedy::getMajor() const {
+<     return this->majorActor;
+< }
+---
+> std::string Comedy::getMajor() const { return this->majorActor; }
+122,124c106
+< std::string Comedy::getReleaseDate() const {
+<     return this->releaseDate;
+< }
+---
+> std::string Comedy::getReleaseDate() const { return this->releaseDate; }
+128,129c110,111
+<     this->majorActor = actor;
+<     return true;
+---
+>   this->majorActor = actor;
+>   return true;
+134,135c116,117
+<     this->releaseDate = date;
+<     return true;
+---
+>   this->releaseDate = date;
+>   return true;
+Running clang-format on ./Customer.cpp
+10,16c10,18
+<     ostream << "\tCustomer Name [" << customer.getFirstName() << " ";
+<     ostream << customer.getLastName() << "]";
+<     ostream << "\tID [" << customer.getID() << "] " << std::endl;
+<     
+<     for (const auto & i : customer.historyLog /*int i = 0; i < customer.historyLog.size(); i ++ */) {
+<         ostream << "\t   " << i /*customer.historyLog[i]*/ << std::endl;
+<     }
+---
+>   ostream << "\tCustomer Name [" << customer.getFirstName() << " ";
+>   ostream << customer.getLastName() << "]";
+>   ostream << "\tID [" << customer.getID() << "] " << std::endl;
+> 
+>   for (const auto &i :
+>        customer
+>            .historyLog /*int i = 0; i < customer.historyLog.size(); i ++ */) {
+>     ostream << "\t   " << i /*customer.historyLog[i]*/ << std::endl;
+>   }
+18c20
+<     return ostream;
+---
+>   return ostream;
+23,25c25,27
+<     setFirstName("");
+<     setLastName("");
+<     setCustomerID("");
+---
+>   setFirstName("");
+>   setLastName("");
+>   setCustomerID("");
+28d29
+< 
+30,33c31,35
+< Customer::Customer(std::string first, std::string second, const std::string & id) {
+<     setFirstName(std::move(first));
+<     setLastName(std::move(second));
+<     setCustomerID(std::move(id));
+---
+> Customer::Customer(std::string first, std::string second,
+>                    const std::string &id) {
+>   setFirstName(std::move(first));
+>   setLastName(std::move(second));
+>   setCustomerID(std::move(id));
+37c39,43
+< bool Customer::setCustomerID(const std::string & id) {
+---
+> bool Customer::setCustomerID(const std::string &id) {
+> 
+>   bool ret_val = false;
+>   if (id.length() == ID_SIZE) {
+>     customerID = id;
+39,44c45,46
+<     bool ret_val = false;
+<     if (id.length() == ID_SIZE) {
+<         customerID = id;
+<         
+<         ret_val =  true;
+<     } 
+---
+>     ret_val = true;
+>   }
+46c48
+<     return ret_val;
+---
+>   return ret_val;
+51,52c53,54
+<     fName = std::move(first);
+<     return true;
+---
+>   fName = std::move(first);
+>   return true;
+57,58c59,60
+<     lName = std::move(last);
+<     return true;
+---
+>   lName = std::move(last);
+>   return true;
+62,65c64,67
+< bool Customer::setCustomer(std::string first, std::string last, const std::string & id) {
+<     return setFirstName(std::move(first)) &&
+<     setLastName(std::move(last)) &&
+<     setCustomerID(std::move(id));
+---
+> bool Customer::setCustomer(std::string first, std::string last,
+>                            const std::string &id) {
+>   return setFirstName(std::move(first)) && setLastName(std::move(last)) &&
+>          setCustomerID(std::move(id));
+69,71c71
+< std::string Customer::getID() const {
+<     return customerID;
+< }
+---
+> std::string Customer::getID() const { return customerID; }
+74,76c74
+< std::string Customer::getFirstName() const {
+<     return fName;
+< }
+---
+> std::string Customer::getFirstName() const { return fName; }
+79,81c77
+< std::string Customer::getLastName() const {
+<     return lName;
+< }
+---
+> std::string Customer::getLastName() const { return lName; }
+85,90c81,86
+<     std::string str = customerID;
+<     int ret_val = 0;
+<     for ( char i : str/*int i = 0; i < str.size(); i++ */ ) {
+<         ret_val += i; //str[i];
+<     }
+<     return ret_val;
+---
+>   std::string str = customerID;
+>   int ret_val = 0;
+>   for (char i : str /*int i = 0; i < str.size(); i++ */) {
+>     ret_val += i; // str[i];
+>   }
+>   return ret_val;
+94,95c90,91
+< void Customer::updateHistory(std::string & history) {
+<     historyLog.push_back(history);
+---
+> void Customer::updateHistory(std::string &history) {
+>   historyLog.push_back(history);
+Running clang-format on ./DisplayTransaction.cpp
+Running clang-format on ./Drama.cpp
+10,12c10
+< char Drama::getChar() const {
+<     return 'D';
+< }
+---
+> char Drama::getChar() const { return 'D'; }
+16c14
+<     if(stock >= 0){
+---
+>   if (stock >= 0) {
+18,19c16,17
+<     }
+<     return true;
+---
+>   }
+>   return true;
+24,25c22,23
+<     this->director = std::move(director);
+<     return true;
+---
+>   this->director = std::move(director);
+>   return true;
+30,31c28,29
+<     this->title = std::move(title);
+<     return false;
+---
+>   this->title = std::move(title);
+>   return false;
+36,37c34,35
+<     this->year = std::move(year);
+<     return false;
+---
+>   this->year = std::move(year);
+>   return false;
+41,43c39
+< int Drama::getStock() const {
+<     return this->stock;
+< }
+---
+> int Drama::getStock() const { return this->stock; }
+46,48c42
+< std::string Drama::getDirector() const {
+<     return this->director;
+< }
+---
+> std::string Drama::getDirector() const { return this->director; }
+51,53c45
+< std::string Drama::getTitle() const {
+<     return this->title;
+< }
+---
+> std::string Drama::getTitle() const { return this->title; }
+56,58c48
+< std::string Drama::getYear() const {
+<     return this->year;
+< }
+---
+> std::string Drama::getYear() const { return this->year; }
+61,63c51
+< std::string Drama::getLog() const {
+<     return " ";
+< }
+---
+> std::string Drama::getLog() const { return " "; }
+67c55
+<     return (director == movie.getDirector()) && (title == movie.getTitle());
+---
+>   return (director == movie.getDirector()) && (title == movie.getTitle());
+71,73c59
+< bool Drama::operator!=(const Movie &movie) const {
+<     return (this == &movie);
+< }
+---
+> bool Drama::operator!=(const Movie &movie) const { return (this == &movie); }
+78c64
+<     bool ret_val = false;
+---
+>   bool ret_val = false;
+80,87c66,72
+<     if (title > movie.getTitle()) {
+<         //return true;
+<         ret_val = true;
+<     } else {
+<         if (year > movie.getYear()) {
+<             //return true;
+<             ret_val = true;
+<         }
+---
+>   if (title > movie.getTitle()) {
+>     // return true;
+>     ret_val = true;
+>   } else {
+>     if (year > movie.getYear()) {
+>       // return true;
+>       ret_val = true;
+89,90c74,76
+<     //return false;
+<     return ret_val;
+---
+>   }
+>   // return false;
+>   return ret_val;
+95,96d80
+<     
+<     bool ret_val = true;
+98,105c82
+<     if (this == &movie) {
+<         //return false;
+<         ret_val = false;
+<     }
+<     if (this > &movie) {
+<         //return false;
+<         ret_val = false;
+<     }
+---
+>   bool ret_val = true;
+107,108c84,94
+<     //return true;
+<     return ret_val;
+---
+>   if (this == &movie) {
+>     // return false;
+>     ret_val = false;
+>   }
+>   if (this > &movie) {
+>     // return false;
+>     ret_val = false;
+>   }
+> 
+>   // return true;
+>   return ret_val;
+112,114c98
+< std::string Drama::getMajor() const {
+<     return this->majorActor;
+< }
+---
+> std::string Drama::getMajor() const { return this->majorActor; }
+117,119c101
+< std::string Drama::getReleaseDate() const {
+<     return this->releaseDate;
+< }
+---
+> std::string Drama::getReleaseDate() const { return this->releaseDate; }
+123,124c105,106
+<     this->majorActor = std::move(actor);
+<     return true;
+---
+>   this->majorActor = std::move(actor);
+>   return true;
+129,130c111,112
+<     this->releaseDate = std::move(date);
+<     return true;
+---
+>   this->releaseDate = std::move(date);
+>   return true;
+Running clang-format on ./HistoryTransaction.cpp
+10,12c10
+< void HistoryTransaction::execute() {
+<     displayCustomerHistory();
+< }
+---
+> void HistoryTransaction::execute() { displayCustomerHistory(); }
+16c14
+<     this->cust = &customer;
+---
+>   this->cust = &customer;
+21c19
+<     std::cout << *cust << std::endl;
+---
+>   std::cout << *cust << std::endl;
+Running clang-format on ./InputProcessor.cpp
+9d8
+< 
+12,85c11,73
+<     std::fstream input;
+<     input.open("data4movies.txt");
+<     while (!input.eof()) {
+<         std::string read_input;
+<         std::getline(input, read_input);
+<         std::stringstream line_input(read_input);
+<         getline(line_input, read_input, ',');
+<         char type = read_input[0];
+< 
+<         Movie* temp = MovieFactory::createMovie(type);
+< 
+<         if (temp) {
+<             getline(line_input, read_input, ',');
+<             int stock = atoi(read_input.c_str());
+< 
+<             temp->setStock(stock);
+<            line_input.get();
+<             getline(line_input, read_input, ',');
+<             std::string director = read_input;
+< 
+<             temp->setDirector(director);
+< 
+<             line_input.get();
+<             getline(line_input, read_input, ',');
+<             std::string title = read_input;
+< 
+<             temp->setTitle(title);
+< 
+<             line_input.get();
+<             getline(line_input, read_input, ',');
+<             std::string year = read_input;
+< 
+<             year.resize(year.size());
+< 
+<             if (temp->getChar() == 'F' || temp->getChar() == 'D' ) { // For non-classic movies
+<                 year = year.substr(0, year.size()-1);
+<                 std::cout << "year" << year<<"X"<<std::endl;
+<                 temp->setYear(year);
+< 
+<             } else { // For classic movies
+<                 //year = year.substr(0, year.size()-4);
+<                 std::string release_date = getDate(year);
+<                 temp->setReleaseDate(release_date);
+< 
+<                 std::string actor = getActor(year);
+<                 temp->setActor(actor);
+<                 
+<             }
+< 
+< 
+<             std::set<Movie*>::iterator it;
+<             Movie* temp_movie_comparator;
+<             switch (temp->getChar()) {
+<                 case COMEDY:
+<                     movies[COMEDY_ENUM].insert(temp);
+<                     break;
+<                 case CLASSIC:
+<                     it = movies[CLASSICS_ENUM].begin();
+<                     for (; it != movies[CLASSICS_ENUM].end(); it++) {
+<                         temp_movie_comparator = *it;
+<                         if (*temp == *temp_movie_comparator){
+<                             temp->setOtherMovie(temp_movie_comparator);
+<                             temp_movie_comparator->setOtherMovie(temp);
+<                         }
+<                     }
+< 
+<                     movies[CLASSICS_ENUM].insert(temp);
+<                     break;
+<                 case DRAMA:
+<                     movies[DRAMA_ENUM].insert(temp);
+<                     break;
+<                 default:
+<                     break;
+<             }
+---
+>   std::fstream input;
+>   input.open("data4movies.txt");
+>   while (!input.eof()) {
+>     std::string read_input;
+>     std::getline(input, read_input);
+>     std::stringstream line_input(read_input);
+>     getline(line_input, read_input, ',');
+>     char type = read_input[0];
+> 
+>     Movie *temp = MovieFactory::createMovie(type);
+> 
+>     if (temp) {
+>       getline(line_input, read_input, ',');
+>       int stock = atoi(read_input.c_str());
+> 
+>       temp->setStock(stock);
+>       line_input.get();
+>       getline(line_input, read_input, ',');
+>       std::string director = read_input;
+> 
+>       temp->setDirector(director);
+> 
+>       line_input.get();
+>       getline(line_input, read_input, ',');
+>       std::string title = read_input;
+> 
+>       temp->setTitle(title);
+> 
+>       line_input.get();
+>       getline(line_input, read_input, ',');
+>       std::string year = read_input;
+> 
+>       year.resize(year.size());
+> 
+>       if (temp->getChar() == 'F' ||
+>           temp->getChar() == 'D') { // For non-classic movies
+>         year = year.substr(0, year.size() - 1);
+>         std::cout << "year" << year << "X" << std::endl;
+>         temp->setYear(year);
+> 
+>       } else { // For classic movies
+>         // year = year.substr(0, year.size()-4);
+>         std::string release_date = getDate(year);
+>         temp->setReleaseDate(release_date);
+> 
+>         std::string actor = getActor(year);
+>         temp->setActor(actor);
+>       }
+> 
+>       std::set<Movie *>::iterator it;
+>       Movie *temp_movie_comparator;
+>       switch (temp->getChar()) {
+>       case COMEDY:
+>         movies[COMEDY_ENUM].insert(temp);
+>         break;
+>       case CLASSIC:
+>         it = movies[CLASSICS_ENUM].begin();
+>         for (; it != movies[CLASSICS_ENUM].end(); it++) {
+>           temp_movie_comparator = *it;
+>           if (*temp == *temp_movie_comparator) {
+>             temp->setOtherMovie(temp_movie_comparator);
+>             temp_movie_comparator->setOtherMovie(temp);
+>           }
+87a76,83
+>         movies[CLASSICS_ENUM].insert(temp);
+>         break;
+>       case DRAMA:
+>         movies[DRAMA_ENUM].insert(temp);
+>         break;
+>       default:
+>         break;
+>       }
+89c85,86
+<     input.close();
+---
+>   }
+>   input.close();
+94,108c91,105
+<     std::fstream input;
+<     input.open("data4customers.txt");
+<     Customer* customer;
+<     while (!input.eof()) {
+<         std::string id; 
+<         std::string l_name;
+<         std::string f_name;
+< 
+<         input >> id;
+<         input >> l_name;
+<         input >> f_name;
+<         customer = new Customer(f_name, l_name, id);
+<         customerContainer.insert(customer);
+<     }
+<     input.close();
+---
+>   std::fstream input;
+>   input.open("data4customers.txt");
+>   Customer *customer;
+>   while (!input.eof()) {
+>     std::string id;
+>     std::string l_name;
+>     std::string f_name;
+> 
+>     input >> id;
+>     input >> l_name;
+>     input >> f_name;
+>     customer = new Customer(f_name, l_name, id);
+>     customerContainer.insert(customer);
+>   }
+>   input.close();
+112,114c109,126
+< void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Customer> &customers) {
+<     if (movies == nullptr) {
+<         return;
+---
+> void InputProcessor::processCommands(std::set<Movie *> movies[],
+>                                      HashTable<Customer> &customers) {
+>   if (movies == nullptr) {
+>     return;
+>   }
+> 
+>   std::fstream input;
+>   input.open("data4commands.txt");
+>   std::string read_input;
+> 
+>   while (!input.eof()) {
+>     getline(input, read_input);
+>     std::stringstream line_input(read_input);
+> 
+>     Transaction *transaction =
+>         TransactionFactory::createTransaction(line_input, movies, customers);
+>     if (transaction) {
+>       transaction->execute();
+115a128,131
+>     delete transaction;
+>   }
+>   input.close();
+> }
+117,119c133,134
+<     std::fstream input;
+<     input.open("data4commands.txt");
+<     std::string read_input;
+---
+> // retieve date from line
+> std::string InputProcessor::getDate(const std::string &input) {
+121,132c136,137
+<     while (!input.eof()) {
+<         getline(input, read_input);
+<         std::stringstream line_input(read_input);
+< 
+<         Transaction* transaction = TransactionFactory::createTransaction(line_input, movies, customers);
+<         if (transaction) {
+<             transaction->execute();
+<         }
+<         delete transaction;
+<     }
+<     input.close();
+< }
+---
+>   std::string ret_val;
+>   std::string temp = input.substr(getActor(input).size());
+134,147c139,145
+< //retieve date from line
+< std::string InputProcessor::getDate(const std::string & input) {
+<    
+<     
+<     std::string ret_val;
+<     std::string temp = input.substr(getActor(input).size());
+< 
+<     ret_val = temp.substr(0, temp.size()-1);
+<   
+<     if(ret_val[0]==' '){
+<         ret_val = ret_val.substr(1);
+<     }
+<     
+<     return ret_val;
+---
+>   ret_val = temp.substr(0, temp.size() - 1);
+> 
+>   if (ret_val[0] == ' ') {
+>     ret_val = ret_val.substr(1);
+>   }
+> 
+>   return ret_val;
+150,151c148,149
+< //reteive actor from a line
+<     std::string InputProcessor::getActor(const std::string & input) {
+---
+> // reteive actor from a line
+> std::string InputProcessor::getActor(const std::string &input) {
+153,154c151,152
+<     std::string ret_val;
+<     int space_count = 0;
+---
+>   std::string ret_val;
+>   int space_count = 0;
+156c154
+<     for(int i=0 ;space_count< 2;i++){
+---
+>   for (int i = 0; space_count < 2; i++) {
+158,163c156,161
+<        if(input[i]== ' '){
+<            space_count++;
+<            ret_val.push_back(' ');
+<        }else{
+<            ret_val.push_back(input[i]);
+<        }
+---
+>     if (input[i] == ' ') {
+>       space_count++;
+>       ret_val.push_back(' ');
+>     } else {
+>       ret_val.push_back(input[i]);
+>     }
+165c163
+<    }//for loop closer
+---
+>   } // for loop closer
+167c165
+<     ret_val = ret_val.substr(0, ret_val.size()-1);
+---
+>   ret_val = ret_val.substr(0, ret_val.size() - 1);
+169c167
+<     return ret_val;
+---
+>   return ret_val;
+Running clang-format on ./InventoryTransaction.cpp
+11c11
+<     displayInventory(movieTreeReference, 3);
+---
+>   displayInventory(movieTreeReference, 3);
+15,24c15,24
+< void InventoryTransaction::displayInventory(std::set<Movie *> *movies, int size) {
+<     std::cout << "Inventory: " << std::endl;
+<     for (int i = 0; i < size; i++) {
+<         std::cout << "_______________________" << std::endl;
+<         std::cout << MOVIE_TYPE[i] << " " << std::endl;
+<         std::cout << "_______________________" << std::endl;
+<         auto j = movies[i].begin();
+<         for (; j != movies[i].end(); j++) {
+<             std::cout << **j << std::endl;
+<         }
+---
+> void InventoryTransaction::displayInventory(std::set<Movie *> *movies,
+>                                             int size) {
+>   std::cout << "Inventory: " << std::endl;
+>   for (int i = 0; i < size; i++) {
+>     std::cout << "_______________________" << std::endl;
+>     std::cout << MOVIE_TYPE[i] << " " << std::endl;
+>     std::cout << "_______________________" << std::endl;
+>     auto j = movies[i].begin();
+>     for (; j != movies[i].end(); j++) {
+>       std::cout << **j << std::endl;
+25a26
+>   }
+Running clang-format on ./main.cpp
+1,2c1
+< #include <iostream>
+< #include <string>
+---
+> #include "Blockbuster.h"
+4d2
+< #include "Movie.h"
+6,7c4
+< #include "Blockbuster.h"
+< #include <set>
+---
+> #include "Movie.h"
+8a6,8
+> #include <iostream>
+> #include <set>
+> #include <string>
+10,12c10,12
+<     Blockbuster blockbuster; // Movie store :)
+<     blockbuster.execute(); // Executes and reads txt files
+<     return 0;
+---
+>   Blockbuster blockbuster; // Movie store :)
+>   blockbuster.execute();   // Executes and reads txt files
+>   return 0;
+Running clang-format on ./Movie.cpp
+7,9c7
+< Movie::Movie() {
+<     other = nullptr;
+< }
+---
+> Movie::Movie() { other = nullptr; }
+13,24c11,22
+<     if (movie.getChar() == 'F' || movie.getChar() == 'D') {
+<         ostream << "\tStock [" << movie.getStock() << "] \n";
+<         ostream << "\tDirector [" << movie.getDirector() << "] \n";
+<         ostream << "\tTitle [" << movie.getTitle() << "] \n";
+<         ostream << "\tYear [" << movie.getYear() << "] \n";
+<     } else {
+<         ostream << "\tStock [" << movie.getStock() << "] \n";
+<         ostream << "\tDirector [" << movie.getDirector() << "] \n";
+<         ostream << "\tTitle [" << movie.getTitle() << "] \n";
+<         ostream << "\tMajor Actor/Actress [" << movie.getMajor() << "] \n";
+<         ostream << "\tRelease Date [" << movie.getReleaseDate() << "] \n";
+<     }
+---
+>   if (movie.getChar() == 'F' || movie.getChar() == 'D') {
+>     ostream << "\tStock [" << movie.getStock() << "] \n";
+>     ostream << "\tDirector [" << movie.getDirector() << "] \n";
+>     ostream << "\tTitle [" << movie.getTitle() << "] \n";
+>     ostream << "\tYear [" << movie.getYear() << "] \n";
+>   } else {
+>     ostream << "\tStock [" << movie.getStock() << "] \n";
+>     ostream << "\tDirector [" << movie.getDirector() << "] \n";
+>     ostream << "\tTitle [" << movie.getTitle() << "] \n";
+>     ostream << "\tMajor Actor/Actress [" << movie.getMajor() << "] \n";
+>     ostream << "\tRelease Date [" << movie.getReleaseDate() << "] \n";
+>   }
+26c24
+<     return ostream;
+---
+>   return ostream;
+31,32c29,30
+<     other = movie;
+<     return true;
+---
+>   other = movie;
+>   return true;
+36,38c34
+< Movie *Movie::getOtherMovie() const {
+<     return other;
+< }
+---
+> Movie *Movie::getOtherMovie() const { return other; }
+Running clang-format on ./MovieFactory.cpp
+11,26c11,26
+<     Movie* ret_val = nullptr;
+<     switch (type) {
+<         case COMEDY:
+<             ret_val = new Comedy;
+<             break;
+<         case CLASSIC:
+<             ret_val = new Classic;
+<             break;
+<         case DRAMA:
+<             ret_val = new Drama;
+<             break;
+<         default:
+<             ret_val = nullptr;
+<             break;
+<     }
+<     return  ret_val;
+---
+>   Movie *ret_val = nullptr;
+>   switch (type) {
+>   case COMEDY:
+>     ret_val = new Comedy;
+>     break;
+>   case CLASSIC:
+>     ret_val = new Classic;
+>     break;
+>   case DRAMA:
+>     ret_val = new Drama;
+>     break;
+>   default:
+>     ret_val = nullptr;
+>     break;
+>   }
+>   return ret_val;
+Running clang-format on ./MovieKey.cpp
+10,12c10
+< void MovieKey::setTitle(std::string title) {
+<     this->title = std::move(title);
+< }
+---
+> void MovieKey::setTitle(std::string title) { this->title = std::move(title); }
+15,17c13
+< void MovieKey::setMovie(Movie *&movie) {
+<     this->movie = movie;
+< }
+---
+> void MovieKey::setMovie(Movie *&movie) { this->movie = movie; }
+20,22c16
+< Movie *MovieKey::getMovie() const {
+<     return movie;
+< }
+---
+> Movie *MovieKey::getMovie() const { return movie; }
+25,27c19
+< std::string MovieKey::getTitle() const {
+<     return title;
+< }
+---
+> std::string MovieKey::getTitle() const { return title; }
+30,32c22
+< bool MovieKey::operator==(const std::string & rhs) const {
+<     return title == rhs;
+< }
+---
+> bool MovieKey::operator==(const std::string &rhs) const { return title == rhs; }
+36,41c26,31
+<     int val = 0;
+<     for ( char i: title /*int i = 0; i < title.size(); i++ */ ) {
+<         std::cout << "val "<< val <<std::endl;
+<         val += i; // title[i];
+<     }
+<     return val;
+---
+>   int val = 0;
+>   for (char i : title /*int i = 0; i < title.size(); i++ */) {
+>     std::cout << "val " << val << std::endl;
+>     val += i; // title[i];
+>   }
+>   return val;
+Running clang-format on ./PhysicalTransaction.cpp
+8,10c8,10
+<     borrowed = false;
+<     movie = nullptr;
+<     customer = nullptr;
+---
+>   borrowed = false;
+>   movie = nullptr;
+>   customer = nullptr;
+13d12
+< 
+15,17c14
+< void PhysicalTransaction::setCustomer(Customer &cust) {
+<     *customer = cust;
+< }
+---
+> void PhysicalTransaction::setCustomer(Customer &cust) { *customer = cust; }
+22,24c19,53
+<     std::string media;
+<     std::string type;
+<     std::string title;
+---
+>   std::string media;
+>   std::string type;
+>   std::string title;
+>   std::string year;
+> 
+>   istream >> media >> type; // double check
+>   istream.get();
+> 
+>   if (media[0] != 'D') {
+>     std::cout << "Invalid media. Available: DVD's (D)" << std::endl;
+>     success = false;
+>     return;
+>   }
+> 
+>   if (type[0] == 'F') {
+>     Movie *comedy = new Comedy;
+>     std::getline(istream, title, ','); // Reads line and stops at comma
+>     istream >> year;
+>     comedy->setTitle(title);
+>     comedy->setYear(year);
+> 
+>     auto it = movieTreeReference[0].begin();
+> 
+>     for (; it != movieTreeReference[0].end(); it++) {
+>       Comedy one = *dynamic_cast<Comedy *>(*it);
+>       Comedy two = *dynamic_cast<Comedy *>(comedy);
+> 
+>       if (one.getTitle() == two.getTitle() && one.getYear() == two.getYear()) {
+>         this->movie = *it;
+>         break;
+>       }
+>     }
+>     delete comedy;
+>   } else if (type[0] == 'C') {
+>     std::string day;
+26,33c55,77
+<     
+<     istream >> media >> type; //double check
+<     istream.get();
+< 
+<     if (media[0] != 'D') {
+<         std::cout << "Invalid media. Available: DVD's (D)" << std::endl;
+<         success = false;
+<         return;
+---
+>     std::string f_name;
+>     std::string l_name;
+>     std::string input;
+>     Movie *classic = new Classic;
+>     getline(istream, input);
+>     std::stringstream str(input);
+>     str >> day;
+>     str >> year;
+>     str >> f_name;
+>     str >> l_name;
+>     std::string full_name = f_name + " " + l_name;
+>     classic->setActor(full_name);
+>     std::string release_date = day + " " + year;
+>     classic->setReleaseDate(release_date);
+> 
+>     auto it = movieTreeReference[1].begin();
+> 
+>     for (; it != movieTreeReference[1].end(); it++) {
+>       Movie *check = *it;
+>       if (classic->getYear() == check->getYear()) {
+>         this->movie = check;
+>         break;
+>       }
+34a79,82
+>     delete classic;
+>   } else if (type[0] == 'D') {
+>     std::string director;
+>     std::string title;
+36,106c84,98
+<     if (type[0] =='F') {
+<         Movie* comedy = new Comedy;
+<         std::getline(istream, title, ','); // Reads line and stops at comma
+<         istream >> year;
+<         comedy->setTitle(title);
+<         comedy->setYear(year);
+< 
+<         auto it = movieTreeReference[0].begin();
+< 
+<         for(; it != movieTreeReference[0].end(); it++) {
+<             Comedy one = *dynamic_cast<Comedy*>(*it);
+<             Comedy two = *dynamic_cast<Comedy*>(comedy);
+< 
+<             if (one.getTitle() == two.getTitle() && one.getYear() == two.getYear()) {
+<                 this->movie = *it;
+<                 break;
+<             }
+<         }
+<         delete comedy;
+<     } else if (type[0] == 'C') {
+<         std::string day;
+<         std::string year;
+<         std::string f_name;
+<         std::string l_name;
+<         std::string input;
+<         Movie* classic = new Classic;
+<         getline(istream, input);
+<         std::stringstream  str(input);
+<         str >> day;
+<         str >> year;
+<         str >> f_name;
+<         str >> l_name;
+<         std::string full_name = f_name + " " + l_name;
+<         classic->setActor(full_name);
+<         std::string release_date = day + " " + year;
+<         classic->setReleaseDate(release_date);
+< 
+<         auto it = movieTreeReference[1].begin();
+< 
+<         for(; it != movieTreeReference[1].end(); it++) {
+<             Movie* check = *it;
+<             if (classic->getYear() == check->getYear()) {
+<                 this->movie = check;
+<                 break;
+<             }
+<         }
+<         delete classic;
+<     } else if (type[0] == 'D') {
+<         std::string director;
+<         std::string title;
+< 
+<         Movie* drama = new Drama;
+<         getline(istream, director, ',');
+<         istream.get();
+<         getline(istream, title, ',');
+<         drama->setDirector(director);
+<         drama->setTitle(title);
+< 
+<         auto it = movieTreeReference[2].begin();
+< 
+<         for(; it != movieTreeReference[2].end(); it++) {
+<             Movie* check = *it;
+<             if (*drama == *check) {
+<                 this->movie = check;
+<                 break;
+<             }
+<         }
+<         delete drama;
+<     } else {
+<         std::cout << type[0] << " is not a valid movie type" << std::endl;
+<         success = false;
+---
+>     Movie *drama = new Drama;
+>     getline(istream, director, ',');
+>     istream.get();
+>     getline(istream, title, ',');
+>     drama->setDirector(director);
+>     drama->setTitle(title);
+> 
+>     auto it = movieTreeReference[2].begin();
+> 
+>     for (; it != movieTreeReference[2].end(); it++) {
+>       Movie *check = *it;
+>       if (*drama == *check) {
+>         this->movie = check;
+>         break;
+>       }
+107a100,104
+>     delete drama;
+>   } else {
+>     std::cout << type[0] << " is not a valid movie type" << std::endl;
+>     success = false;
+>   }
+Running clang-format on ./ReturnTransaction.cpp
+11,13c11,13
+<     if (movie != nullptr) {
+<         executeReturn(*movie);
+<     }
+---
+>   if (movie != nullptr) {
+>     executeReturn(*movie);
+>   }
+18c18
+<     bool ret_val = false;
+---
+>   bool ret_val = false;
+20,27c20,27
+<     if (borrowed) {
+<         //return movie.setStock(movie.getStock() + 1);
+<         ret_val = movie.setStock(movie.getStock() + 1);
+<     } else {
+<         std::cout << "Can't return " << movie.getTitle() << std::endl;
+<         //return false;
+<         ret_val = false;
+<     }
+---
+>   if (borrowed) {
+>     // return movie.setStock(movie.getStock() + 1);
+>     ret_val = movie.setStock(movie.getStock() + 1);
+>   } else {
+>     std::cout << "Can't return " << movie.getTitle() << std::endl;
+>     // return false;
+>     ret_val = false;
+>   }
+29c29
+<     return ret_val;
+---
+>   return ret_val;
+34,37c34,37
+<     if (movie != nullptr) {
+<         return "Returned " + movie->getTitle();
+<     }
+<     return "";
+---
+>   if (movie != nullptr) {
+>     return "Returned " + movie->getTitle();
+>   }
+>   return "";
+Running clang-format on ./Transaction.cpp
+7,9c7
+< Transaction::Transaction() {
+<     movieTreeReference = nullptr;
+< }
+---
+> Transaction::Transaction() { movieTreeReference = nullptr; }
+13c11
+<     movieTreeReference = movieTree;
+---
+>   movieTreeReference = movieTree;
+Running clang-format on ./TransactionFactory.cpp
+9,76c9,40
+< // Creates and sets up a transaction while attributing it to the respective customer and movie.
+< Transaction *TransactionFactory::createTransaction(std::istream &istream, std::set<Movie *> movies[],
+<                                                    HashTable<Customer> &customers) {
+<     std::string type;
+<     std::string title;
+<     std::string year;
+< 
+<     bool valid = true;
+< 
+<     Transaction* ret_val = nullptr;
+<     HistoryTransaction* history = nullptr;
+<     BorrowTransaction* borrow = nullptr;
+<     ReturnTransaction* return_trans = nullptr;
+< 
+<     Customer cust;
+<     std::string customer_id;
+< 
+<     istream >> type;
+< 
+<     switch(type[0]) {
+<         case BORROW:
+<             ret_val = new BorrowTransaction;
+<             ret_val->setMovie(movies);
+<             borrow = dynamic_cast<BorrowTransaction*>(ret_val);
+<             istream >> customer_id;
+<             cust.setCustomerID(customer_id);
+<             borrow->setStream(istream,valid);
+<             if (valid) {
+<                 if (customers.get(&cust) != nullptr) {
+< 
+<                     auto log = borrow->getLogOfTrans();
+<                     
+<                     customers.get(&cust)->updateHistory(log) ;
+<                 }
+<             }
+<             break;
+<         case RETURN:
+<             ret_val = new ReturnTransaction;
+<             ret_val->setMovie(movies);
+<             return_trans = dynamic_cast<ReturnTransaction*>(ret_val);
+<             istream >>customer_id;
+<             cust.setCustomerID(customer_id);
+<             return_trans->setStream(istream, valid);
+< 
+<             if (valid) {
+<                 if (customers.get(&cust) != nullptr) {
+< 
+<                     auto log = return_trans->getLogOfTrans();
+<                     customers.get(&cust)->updateHistory(log);
+<                 }
+<             }
+<             break;
+<         case HISTORY:
+<             ret_val = new HistoryTransaction;
+<             history = dynamic_cast<HistoryTransaction*>(ret_val);
+< 
+<             istream >> customer_id;
+<             cust.setCustomerID(customer_id);
+<             history->setCustomer(*customers.get(&cust));
+<             break;
+<         case INVENTORY:
+<             ret_val = new InventoryTransaction;
+<             ret_val->setMovie(movies);
+<             break;
+<         default:
+<             ret_val = nullptr;
+<             std::cout << type[0] << " is an invalid transaction command" << std::endl;
+<             break;
+---
+> // Creates and sets up a transaction while attributing it to the respective
+> // customer and movie.
+> Transaction *
+> TransactionFactory::createTransaction(std::istream &istream,
+>                                       std::set<Movie *> movies[],
+>                                       HashTable<Customer> &customers) {
+>   std::string type;
+>   std::string title;
+>   std::string year;
+> 
+>   bool valid = true;
+> 
+>   Transaction *ret_val = nullptr;
+>   HistoryTransaction *history = nullptr;
+>   BorrowTransaction *borrow = nullptr;
+>   ReturnTransaction *return_trans = nullptr;
+> 
+>   Customer cust;
+>   std::string customer_id;
+> 
+>   istream >> type;
+> 
+>   switch (type[0]) {
+>   case BORROW:
+>     ret_val = new BorrowTransaction;
+>     ret_val->setMovie(movies);
+>     borrow = dynamic_cast<BorrowTransaction *>(ret_val);
+>     istream >> customer_id;
+>     cust.setCustomerID(customer_id);
+>     borrow->setStream(istream, valid);
+>     if (valid) {
+>       if (customers.get(&cust) != nullptr) {
+77a42,61
+>         auto log = borrow->getLogOfTrans();
+> 
+>         customers.get(&cust)->updateHistory(log);
+>       }
+>     }
+>     break;
+>   case RETURN:
+>     ret_val = new ReturnTransaction;
+>     ret_val->setMovie(movies);
+>     return_trans = dynamic_cast<ReturnTransaction *>(ret_val);
+>     istream >> customer_id;
+>     cust.setCustomerID(customer_id);
+>     return_trans->setStream(istream, valid);
+> 
+>     if (valid) {
+>       if (customers.get(&cust) != nullptr) {
+> 
+>         auto log = return_trans->getLogOfTrans();
+>         customers.get(&cust)->updateHistory(log);
+>       }
+79c63,81
+<     return ret_val;
+---
+>     break;
+>   case HISTORY:
+>     ret_val = new HistoryTransaction;
+>     history = dynamic_cast<HistoryTransaction *>(ret_val);
+> 
+>     istream >> customer_id;
+>     cust.setCustomerID(customer_id);
+>     history->setCustomer(*customers.get(&cust));
+>     break;
+>   case INVENTORY:
+>     ret_val = new InventoryTransaction;
+>     ret_val->setMovie(movies);
+>     break;
+>   default:
+>     ret_val = nullptr;
+>     std::cout << type[0] << " is an invalid transaction command" << std::endl;
+>     break;
+>   }
+>   return ret_val;
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+==1888423== Memcheck, a memory error detector
+==1888423== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1888423== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1888423== Command: ./a.out
+==1888423== Parent PID: 1888188
+==1888423== 
+==1888423== Mismatched free() / delete / delete []
+==1888423==    at 0x4C3A021: operator delete(void*) (vg_replace_malloc.c:923)
+==1888423==    by 0x402ABF: HashTable<Customer>::~HashTable() (HashTable.h:71)
+==1888423==    by 0x402585: Blockbuster::~Blockbuster() (Blockbuster.cpp:10)
+==1888423==    by 0x407CAB: main (main.cpp:10)
+==1888423==  Address 0x5b4cc80 is 0 bytes inside a block of size 7,928 alloc'd
+==1888423==    at 0x4C38B6F: operator new[](unsigned long) (vg_replace_malloc.c:640)
+==1888423==    by 0x402952: HashTable<Customer>::HashTable() (HashTable.h:56)
+==1888423==    by 0x402459: Blockbuster::Blockbuster() (Blockbuster.h:18)
+==1888423==    by 0x407C88: main (main.cpp:10)
+==1888423== 
+==1888423== 
+==1888423== HEAP SUMMARY:
+==1888423==     in use at exit: 0 bytes in 0 blocks
+==1888423==   total heap usage: 773 allocs, 773 frees, 148,525 bytes allocated
+==1888423== 
+==1888423== All heap blocks were freed -- no leaks are possible
+==1888423== 
+==1888423== For lists of detected and suppressed errors, rerun with: -s
+==1888423== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+WARNING: check-code-coverage.sh script is missing
+Mon Dec  5 23:56:28 PST 2022
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================
