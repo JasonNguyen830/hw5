@@ -133,18 +133,38 @@ void InputProcessor::processCommands(std::set<Movie *> movies[], HashTable<Custo
 
 //retieve date from line
 std::string InputProcessor::getDate(const std::string & input) {
-    int start = input.size() - 8;
-    int end  = input.size()-15;
-    std::string ret_val = input.substr(start, end);
-    std::cout<<"input" <<input<<std::endl;
-    std::cout << "getDate() value is: "<<ret_val <<"X"<< std::endl;
+   
+    
+    std::string ret_val;
+    std::string temp = input.substr(getActor(input).size());
+
+    ret_val = temp.substr(0, temp.size()-1);
+  
+    if(ret_val[0]==' '){
+        ret_val = ret_val.substr(1);
+    }
+    
     return ret_val;
 }
 
 //reteive actor from a line
     std::string InputProcessor::getActor(const std::string & input) {
-    int start = 0;
-    int end  = input.size() - 4;
-    std::string ret_val = input.substr(start, end);
+
+    std::string ret_val;
+    int space_count = 0;
+
+    for(int i=0 ;space_count< 2;i++){
+
+       if(input[i]== ' '){
+           space_count++;
+           ret_val.push_back(' ');
+       }else{
+           ret_val.push_back(input[i]);
+       }
+
+   }//for loop closer
+
+    ret_val = ret_val.substr(0, ret_val.size()-1);
+
     return ret_val;
 }

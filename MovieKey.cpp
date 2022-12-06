@@ -2,7 +2,7 @@
 // HW 5
 
 #include "MovieKey.h"
-#include<iostream>
+
 // Constructor
 MovieKey::MovieKey() = default;
 
